@@ -30,13 +30,7 @@
     </ul>
   </nav>
 
-  <div class="header-content">
-    <main class="content">
-      <h1>Welcome to Aldaw-Wave</h1>
-    </main>
-
     <div class="map-input-graph-reco">
-      <div class="map-origin">
         <div class="floating-map">
 
           <!-- Remove for now 
@@ -44,9 +38,9 @@
           <div class="floating-map__overlay" onclick="window.location.href='maps.html'">Open Interactive Map</div>
           -->
 
-          <div id="map" style="width: 100%; height: 100%;"></div>
+          <div id="map"></div>
 
-
+        </div>
           <!-- Form -->
           <div class="bottom-panel">
 
@@ -101,9 +95,6 @@
                 <button onclick="showRecommendations()" id="showGraphBtn">Find Recommendation</button>
             </div>
           </div>
-
-        </div>
-      </div>
       
       <div class="graph-reco">
         <div class="graph-container">
@@ -114,6 +105,7 @@
         </div>
       </div>
     </div>
+    
   </div>
 
   <script>
@@ -140,54 +132,3 @@
 
 </body>
 </html>
-
-<!-- <div class="main-bottom-panel">
-            <div class="main-bottom-panel-padding">
-              <div class="main-orig-dest">
-                <div class="main-input-group with-icon">
-                  <label for="origin">Origin</label>
-                  <div class="main-input-wrapper">
-                    <img src="assets/location.png" alt="Origin" class="input-icon">
-                    <input type="text" id="origin" placeholder="Enter origin"> 
-                  </div>
-                </div>
-
-                <div class="main-swap-btn" title="Swap origin and destination" onclick="swapInputs()">
-                  <img src="assets/Arrow.png" alt="Swap" class="swap-icon">
-                </div>
-
-                <div class="main-input-group with-icon">
-                  <label for="destination">Destination</label>
-                  <div class="main-input-wrapper">
-                    <img src="assets/destination.png" alt="Destination" class="input-icon">
-                    <input type="text" id="destination" placeholder="Enter destination"> 
-                  </div>
-                </div>
-
-                <div class="main-date-time-gap"></div>
-              
-                <div class="main-input-group with-icon">
-                  <label for="date">Arrival Date</label>
-                  <div class="main-input-wrapper">
-                    <img src="assets/calendar.png" alt="Date" class="input-icon">
-                    <input type="date" id="date">
-                  </div>
-                </div>
-
-                <div class="main-date-time-gap"></div>
-
-                <div class="main-input-group with-icon">
-                  <label for="time">Preferred Arrival Time</label>
-                  <div class="main-input-wrapper">
-                    <img src="assets/clock.png" alt="Time" class="input-icon">
-                    <input type="time" id="time">
-                  </div>
-                </div>
-              </div>
-
-              <div class="btn-display">
-                <button onclick="showRecommendations()" id="showGraphBtn">Find Recommendation</button>
-                <p id="travel-time-display"></p>
-              </div>
-            </div>
-          </div> -->

@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* === GLOBAL === */
 body, html {
   margin: 0;
@@ -7,7 +13,8 @@ body, html {
   font-family: Arial, sans-serif;
   background: #F0F0F0;
   height: 100vh;
-  width: 100%;
+  overflow: hidden;
+  max-width: 100vw;
 }
 
 /* Removes the icon from date input */
@@ -98,23 +105,21 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   background: white;
 }
 
+
 /* Bottom form */
 .bottom-panel {
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  background: white;
-  border: 2px solid #333;
+  position: relative;        
+  z-index: 2;                  
+  background: rgba(255,255,255,0.95);
+  border: 2px solid #ff914d;
   border-radius: 15px;
   padding: 20px;
   display: flex;
-  gap: 10px;
+  gap: 2.5%;         /* horizontal gap */
+  row-gap: 15px;     /* vertical gap between lines */
   flex-wrap: wrap;
-  justify-content: space-between;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  z-index: 5;
+  width: 100%;
+  height: auto;
 }
 
 .bottom-panel input {
@@ -144,7 +149,6 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   display: flex;
   flex-direction: column;
   flex: 1;
-  min-width: 120px;
 }
 
 .input-group label {
@@ -159,6 +163,8 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   position: relative;
   display: flex;
   align-items: center;
+  width: auto;
+  min-width: 100%;
 }
 
 .input-icon {
@@ -182,12 +188,12 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 /* Swap button */
 .swap-btn {
+  margin: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 20px;
   cursor: pointer;
-  padding: 0 10px;
   user-select: none;
   transition: transform 0.2s ease;
 }
@@ -199,31 +205,27 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 /* === MAIN PAGE === */
 .main-page {
   display: flex;
-  background: #F0F0F0;
+  background: transparent; 
+  max-height: 100vh;
 }
 
 .map-origin {
   display: flex;
-  flex-direction: column;
-  width: 100%;
+  flex-direction: column;  /* stack children vertically */
+  justify-content: flex-end; /* push bottom panel to bottom */
+  align-items: center;     /* center horizontally */
+  height: 100%;         
+  position: relative;
 }
 
 /* Floating map (no positioning, you can place it manually) */
 .floating-map {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  min-height: 20rem;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.floating-map:hover {
-  transform: scale(1.03);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  position: fixed;
+  top: 0;
+  left: 7%; /* avoid sidebar */
+  width: 93%;
+  height: 100vh;
+  z-index: 0; /* send map behind everything else */
 }
 
 .floating-map iframe {
@@ -244,21 +246,27 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   font-size: 16px;
   font-family: 'Quicksand', sans-serif;
 }
+ 
+#map {
+  width: 100%;
+  height: 100%;
+}
 
 /* Sidebar */
 .sidebar {
-  width: 7%;
+  width: 8%;
   background: #ffffff;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: width 0.3s ease;
   position: relative;
+  z-index: 10;
 }
 
 .sidebar.expanded {
-  width: 20%;
+  width: 30%;
 }
 
 /* Logo Container */
@@ -269,6 +277,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   justify-content: center;
   cursor: pointer;
   background: #ff914d;
+  padding: 1rem;
   border-radius: 15px;
   width: 80%;
   height: 10%;
@@ -367,108 +376,8 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   background: #f4f4f4;
 }
 
-/* MainBottom form */
-.main-bottom-panel {
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: white;
-  border: 2px solid #333;
-  border-radius: 15px;
-  width: auto; /* optional, can set fixed or percentage width */
-}
-.main-bottom-panel input {
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-}
-
-.main-bottom-panel button {
-  background: #333;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.main-bottom-panel button:hover {
-  background: #555;
-}
-
-.main-bottom-panel-padding{
-  padding: 2%;
-}
-
-.main-input-group {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.main-input-group label {
-  font-family: 'Quicksand', sans-serif;
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: #4A4A4A;
-  margin-bottom: 5px;
-  position: relative;
-}
-
-.main-input-wrapper {
-  position: relative;
-  width: 10em;
-  display: flex;
-  align-items: center;
-  margin-bottom: 2%;
-}
-
-.main-orig-dest {
-  display: flex;
-  flex-direction: row;
-}
-
-.main-input-icon {
-  position: absolute;
-  left: 10px;
-  width: 18px;
-  height: 18px;
-  pointer-events: none;
-  opacity: 0.7;
-}
-
-.main-input-wrapper input {
-  width: 100%;
-  padding: 10px 10px 10px 35px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-  font-family: 'Quicksand', sans-serif;
-  box-sizing: border-box;
-  margin-bottom: 2%;
-}
-
-/* Swap button */
-.main-swap-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  cursor: pointer;
-  padding: 0 10px;
-  user-select: none;
-  transition: transform 0.2s ease;
-}
-
-.main-swap-btn:hover {
-  transform: rotate(180deg);
-}
-
 .main-date-time-gap{
-  width: 3%;
+  width: 5%;
 }
 
 /* Content */
@@ -480,18 +389,21 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 .graph-reco{
   display: none;
   width: 100%;
+  height: 100%;
   flex-direction: column;
   align-items: end;
   justify-content: space-between;
+  z-index: 5;
 }
 
 .graph-container, .reco-container {
   width: 90%;
-  height: 100%;
-  max-height: 15rem;
+  min-height: 45%;
+  max-height: 45%;
   padding: 2%;
   background: #fff;
-  border: 2px solid #333;
+  border: 2px solid #ff914d;
+  color: #4A4A4A;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -500,15 +412,16 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 .map-input-graph-reco{
   display: flex;
-  height: 100%;
+  width: 100%;
   flex-direction: row;
-  margin: 2%;
+  align-items: flex-end;
+  margin: 3%;
+  box-sizing: border-box;
 }
 
 .header-content{
   display: flex;
   flex-direction: column;
-  width: 100vw;
 }
 
 #graph-placeholder, #reco-placeholder{
@@ -533,12 +446,17 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   justify-content: space-between;
 }
 
-@media screen and (max-width: 821px) {
-  .map-input-graph-reco{
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    margin: 10%;
-    gap: 2rem;
-  }
+#showGraphBtn {
+  background-color: #ff914d;  /* primary button color */
+  color: white;               /* text color */
+  border: none;               /* removes border */
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+#showGraphBtn:hover {
+  background-color: #e5833f;  /* darker shade on hover */
 }
