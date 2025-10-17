@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prototype Map with Floating Recommendations</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+  <!-- Back Floating Button -->
+  <button class="back-btn" onclick="window.location.href='index.html'">←</button>
+  <!-- Map -->
+  <div id="map-container">
+    <iframe src="https://maps.google.com/maps?q=angeles%20city&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+
+    <!-- Floating Recommendation Widget -->
+    <div id="recommendation-widget">
+      <h3>Recommendations</h3>
+      <div class="content" id="recommendation-content"></div>
+    </div>
+
+    <!-- Form -->
+    <div class="bottom-panel">
+
+      <!-- Origin Input -->
+      <div class="input-group with-icon">
+        <label for="origin">Origin</label>
+        <div class="input-wrapper">
+          <img src="assets/location.png" alt="Origin" class="input-icon">
+          <input type="text" id="origin" placeholder="Enter origin">
+        </div>
+      </div>
+
+      <!-- Swap Button -->
+      <div class="swap-btn" title="Swap origin and destination" onclick="swapInputs()">
+        <img src="assets/Arrow.png" alt="Swap" class="swap-icon">
+      </div>
+
+      <!-- Destination Input -->
+      <div class="input-group with-icon">
+        <label for="destination">Destination</label>
+        <div class="input-wrapper">
+          <img src="assets/destination.png" alt="Destination" class="input-icon">
+          <input type="text" id="destination" placeholder="Enter destination">
+        </div>
+      </div>
+
+      <!-- Date Input -->
+      <div class="input-group with-icon">
+        <label for="date">Date</label>
+        <div class="input-wrapper">
+          <img src="assets/calendar.png" alt="Date" class="input-icon">
+          <input type="date" id="date">
+        </div>
+      </div>
+
+      <!-- Preferred Time Input -->
+        <div class="input-group with-icon">
+          <label for="time">Preferred Time</label>
+          <div class="input-wrapper">
+            <img src="assets/clock.png" alt="Time" class="input-icon">
+            <input type="time" id="time">
+          </div>
+        </div>
+
+      <!-- Button -->
+      <button onclick="showRecommendations()">Find Recommendation</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

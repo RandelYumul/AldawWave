@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aldaw-Wave Main Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="main-page">
+
+  <nav class="sidebar">
+    <div class="logo-container" onclick="toggleSidebar()">
+      <img src="assets/aldaw_logo.png" alt="Logo" class="logo">
+      <span class="logo-text">Aldaw-Wave</span>
+      <span class="toggle-icon">›</span>
+    </div>
+    <ul class="nav-links">
+      <li class="nav-item active">
+        <a href="maps.html">
+          <img src="https://icon2.cleanpng.com/20180519/lej/kisspng-computer-icons-house-clip-art-5b00157a03fb64.7246548815267321540163.jpg" alt="Home" class="icon">
+          <span class="nav-text">Home</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="about.html">
+          <img src="assets/Aboutlogo.png" alt="About" class="icon">
+          <span class="nav-text">About</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="header-content">
+    <main class="content">
+      <h1>Welcome to Aldaw-Wave</h1>
+    </main>
+
+    <div class="map-input-graph-reco">
+      <div class="map-origin">
+        <div class="floating-map">
+          <iframe src="https://maps.google.com/maps?q=angeles%20city&t=&z=13&ie=UTF8&iwloc=&output=embed" onclick="window.location.href='maps.html'"></iframe>
+          <div class="floating-map__overlay" onclick="window.location.href='maps.html'">Open Interactive Map</div>
+          
+
+          <!-- Form -->
+          <div class="bottom-panel">
+
+            <!-- Origin Input -->
+            <div class="input-group with-icon">
+              <label for="origin">Origin</label>
+              <div class="input-wrapper">
+                <img src="assets/location.png" alt="Origin" class="input-icon">
+                <input type="text" id="origin" placeholder="Enter origin">
+              </div>
+            </div>
+
+            <!-- Swap Button -->
+            <div class="swap-btn" title="Swap origin and destination" onclick="swapInputs()">
+              <img src="assets/Arrow.png" alt="Swap" class="swap-icon">
+            </div>
+
+            <!-- Destination Input -->
+            <div class="input-group with-icon">
+              <label for="destination">Destination</label>
+              <div class="input-wrapper">
+                <img src="assets/destination.png" alt="Destination" class="input-icon">
+                <input type="text" id="destination" placeholder="Enter destination">
+              </div>
+            </div>
+
+            <div class="main-date-time-gap"></div>
+
+            <!-- Date Input -->
+            <div class="input-group with-icon">
+              <label for="date">Date</label>
+              <div class="input-wrapper">
+                <img src="assets/calendar.png" alt="Date" class="input-icon">
+                <input type="date" id="date">
+              </div>
+            </div>
+
+            <div class="main-date-time-gap"></div>
+
+            <!-- Preferred Time Input -->
+              <div class="input-group with-icon">
+                <label for="time">Preferred Time</label>
+                <div class="input-wrapper">
+                  <img src="assets/clock.png" alt="Time" class="input-icon">
+                  <input type="time" id="time">
+                </div>
+              </div>
+
+            <!-- Button -->
+            <div class="btn-display">
+                <p id="travel-time-display"></p>
+                <button onclick="showRecommendations()" id="showGraphBtn">Find Recommendation</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+      <div class="graph-reco">
+        <div class="graph-container">
+          <p id="graph-placeholder">Input your route and time to see the hourly heat index forecast graph.</p>
+        </div>
+        <div class="reco-container">
+          <p id="reco-placeholder">Departure recommendations and travel tips will appear here.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+
+<!-- <div class="main-bottom-panel">
+            <div class="main-bottom-panel-padding">
+              <div class="main-orig-dest">
+                <div class="main-input-group with-icon">
+                  <label for="origin">Origin</label>
+                  <div class="main-input-wrapper">
+                    <img src="assets/location.png" alt="Origin" class="input-icon">
+                    <input type="text" id="origin" placeholder="Enter origin"> 
+                  </div>
+                </div>
+
+                <div class="main-swap-btn" title="Swap origin and destination" onclick="swapInputs()">
+                  <img src="assets/Arrow.png" alt="Swap" class="swap-icon">
+                </div>
+
+                <div class="main-input-group with-icon">
+                  <label for="destination">Destination</label>
+                  <div class="main-input-wrapper">
+                    <img src="assets/destination.png" alt="Destination" class="input-icon">
+                    <input type="text" id="destination" placeholder="Enter destination"> 
+                  </div>
+                </div>
+
+                <div class="main-date-time-gap"></div>
+              
+                <div class="main-input-group with-icon">
+                  <label for="date">Arrival Date</label>
+                  <div class="main-input-wrapper">
+                    <img src="assets/calendar.png" alt="Date" class="input-icon">
+                    <input type="date" id="date">
+                  </div>
+                </div>
+
+                <div class="main-date-time-gap"></div>
+
+                <div class="main-input-group with-icon">
+                  <label for="time">Preferred Arrival Time</label>
+                  <div class="main-input-wrapper">
+                    <img src="assets/clock.png" alt="Time" class="input-icon">
+                    <input type="time" id="time">
+                  </div>
+                </div>
+              </div>
+
+              <div class="btn-display">
+                <button onclick="showRecommendations()" id="showGraphBtn">Find Recommendation</button>
+                <p id="travel-time-display"></p>
+              </div>
+            </div>
+          </div> -->
