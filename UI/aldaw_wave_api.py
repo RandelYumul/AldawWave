@@ -33,6 +33,13 @@ MODEL_FILE = 'aldaw_wave_model.joblib'
 app = Flask(__name__)
 CORS(app)
 
+# For html API Key
+@app.route("/get_api_key", methods=["GET"])
+def get_api_key():
+    """Returns the Google API key (frontend can use it to load Maps JS)."""
+    return jsonify({"key": GOOGLE_API_KEY})
+
+
 # --- Global Variables for Pre-loaded Data/Model ---
 data = None
 model = None

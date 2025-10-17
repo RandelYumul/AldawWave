@@ -17,8 +17,105 @@ window.onload = function() {
     timeInput.value = `${nextHourStr}:00`;
 };
 
+let map, directionsService, directionsRenderer, originAutocomplete, destinationAutocomplete;
+
+function initMap() {
+    // Initialize the map centered on the Philippines
+    map = new google.maps.Map(document.getElementById("map"), {
+        center: { lat: 15.1449, lng: 120.5896 }, // Angeles City
+        zoom: 12,
+    });
+
+    directionsService = new google.maps.DirectionsService();
+    directionsRenderer = new google.maps.DirectionsRenderer({
+        map: map,
+        suppressMarkers: false,
+        polylineOptions: {
+            strokeColor: "red",
+            strokeOpacity: 0.8,
+            strokeWeight: 6,
+        },
+    });
+
+    // Setup autocomplete for inputs
+    const originInput = document.getElementById('origin');
+    const destinationInput = document.getElementById('destination');
+
+    const options = { types: ['geocode'], componentRestrictions: { country: 'ph' } };
+
+    originAutocomplete = new google.maps.places.Autocomplete(originInput, options);
+    destinationAutocomplete = new google.maps.places.Autocomplete(destinationInput, options);
+}
+
+// Draw route between origin and destination
+function drawRoute() {
+    const origin = document.getElementById("origin").value;
+    const destination = document.getElementById("destination").value;
+
+    if (!origin || !destination) {
+        alert("Please enter both origin and destination.");
+        return;
+    }
+
+    const request = {
+        origin: origin,
+        destination: destination,
+        travelMode: google.maps.TravelMode.DRIVING
+    };
+
+    directionsService.route(request, (result, status) => {
+        if (status === "OK") {
+            directionsRenderer.setDirections(result);
+        } else {
+            alert("Could not display directions due to: " + status);
+        }
+    });
+}
+
+function initAutocomplete() {
+    // 1. Get the input elements by their IDs
+    const originInput = document.getElementById('origin');
+    const destinationInput = document.getElementById('destination');
+
+    // Check if the Google Maps API loaded correctly
+    if (typeof google === 'undefined' || !google.maps.places) {
+        console.error("Google Maps Places library is not loaded. Check your API key and script tag.");
+        return;
+    }
+
+    // 2. Create the Autocomplete objects
+    const autocompleteOptions = {
+        // Restrict results to locations that can be geocoded (addresses, cities, etc.)
+        types: ['geocode', 'establishment'],
+        // Optional: uncomment to restrict search to a specific country (e.g., Philippines)
+        // componentRestrictions: { country: 'ph' } 
+    };
+
+    const originAutocomplete = new google.maps.places.Autocomplete(originInput, autocompleteOptions);
+    const destinationAutocomplete = new google.maps.places.Autocomplete(destinationInput, autocompleteOptions);
+
+    // 3. Optional: Listen for the 'place_changed' event
+    // This ensures your backend always receives the standardized full address.
+    originAutocomplete.addListener('place_changed', () => {
+        const place = originAutocomplete.getPlace();
+        // The input value is automatically updated with place.name or formatted_address
+        if (place.formatted_address) {
+             originInput.value = place.formatted_address;
+             console.log('Origin Selected:', place.formatted_address);
+        }
+    });
+
+    destinationAutocomplete.addListener('place_changed', () => {
+        const place = destinationAutocomplete.getPlace();
+        if (place.formatted_address) {
+            destinationInput.value = place.formatted_address;
+            console.log('Destination Selected:', place.formatted_address);
+        }
+    });
+}
 
 async function showRecommendations() {
+    drawRoute();
     const origin = document.getElementById("origin").value;
     const destination = document.getElementById("destination").value;
     const date = document.getElementById("date").value;
