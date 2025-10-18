@@ -460,3 +460,82 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 #showGraphBtn:hover {
   background-color: #e5833f;  /* darker shade on hover */
 }
+
+/* ABOUT US */
+h1 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 2.2rem;
+  color: #ff914d; /* Professional blue tone */
+}
+
+/* === TEAM SECTION === */
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch; /* Keeps all boxes equal height */
+  gap: 30px;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.team-member {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 250px;
+  min-height: 380px; /* ensures equal “box” height */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.3s ease;
+  box-sizing: border-box;
+}
+
+.team-member img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.member-name {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ff914d;
+}
+
+.member-title {
+  font-size: 0.95rem;
+  color: #64748b;
+}
+
+.header-team{
+  display: flex;
+  flex-direction: column;
+}
+
+/* === RESPONSIVENESS === */
+@media (max-width: 1024px) {
+  .team-member {
+    width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-member {
+    width: 45%;
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-member {
+    width: 90%;
+    min-height: 340px;
+  }
+}
