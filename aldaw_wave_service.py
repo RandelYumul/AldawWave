@@ -1,4 +1,3 @@
-# aldaw_wave_service.py
 import os
 import warnings
 from datetime import datetime, timedelta
@@ -40,7 +39,7 @@ TIMEZONE = "Asia/Singapore"
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
-# Training control parameters (tweak to trade-off speed vs. thoroughness)
+# Training control parameters
 RANDOM_SEARCH_ITERS = int(os.getenv("RANDOM_SEARCH_ITERS", "5"))  # keep small for speed
 CV_FOLDS = int(os.getenv("CV_FOLDS", "3"))
 R2_DOWNGRADE_THRESHOLD = float(os.getenv("R2_DOWNGRADE_THRESHOLD", "0.02"))  # retrain if r2 drop > this
@@ -76,7 +75,7 @@ def load_csv_or_empty(csv_file=CSV_FILE):
         return pd.DataFrame()
 
 def fetch_openmeteo_archive(start_date, end_date):
-    # returns a DataFrame like your original logic
+    # returns a DataFrame
     cache_session = requests_cache.CachedSession(CACHE_DB, expire_after=-1)
     retry_session = retry(cache_session, retries=5, backoff_factor=0.2)
     client = openmeteo_requests.Client(session=retry_session)
@@ -209,7 +208,7 @@ def initialize_model(force_retrain=False):
             if not df_new.empty:
                 updated_df = pd.concat([existing_df, df_new], ignore_index=True).drop_duplicates(subset=["time"])
                 updated_df["time"] = pd.to_datetime(updated_df["time"], utc=True).dt.tz_convert(None)
-                # Save copy-friendly formatting (you can keep your previous format if desired)
+                # Save with format of the CSV
                 updated_df_save = updated_df.copy()
                 updated_df_save["time"] = updated_df_save["time"].dt.strftime("%#m/%#d/%Y %I:%M:%S %p")
                 for col in updated_df_save.columns:
@@ -275,10 +274,10 @@ def initialize_model(force_retrain=False):
             retrain_needed = True
             reason = "evaluation failed"
 
-    # If retrain needed, do it now (synchronously)
+    # If retrain needed, reprocess (synchronously)
     if retrain_needed:
         if len(X_all) < MODEL_MIN_TRAIN_ROWS:
-            # If dataset too small, still try to train but be careful
+            # If dataset too small, still try to train
             print(f"WARNING: Only {len(X_all)} rows available. Training may be unreliable.")
         print(f"⏳ Retraining model because: {reason or 'forced'} ...")
         # Use a train-test split and quick randomized search
@@ -412,7 +411,7 @@ def get_recommendation():
                 'cos_hour': np.cos(2*np.pi*h/24)
             }])
 
-            # ✅ Use precomputed prediction if available, else model.predict()
+            # Use precomputed prediction if available, else model.predict()
             if hourly_for_date is not None and not hourly_for_date.empty:
                 match = hourly_for_date[hourly_for_date["hour"] == h]
                 if not match.empty:
