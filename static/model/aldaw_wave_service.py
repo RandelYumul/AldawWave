@@ -28,9 +28,11 @@ load_dotenv()
 warnings.filterwarnings("ignore")
 
 # ---------- Configuration ----------
-CSV_FILE = "angelesdataset.csv"
-MODEL_FILE = "aldaw_wave_model.joblib"
-MODEL_META_FILE = "aldaw_wave_model_meta.joblib"  # store metadata: last_trained_on (datetime)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+CSV_FILE = os.path.join(BASE_DIR, "dataset", "angelesdataset.csv")
+MODEL_FILE = os.path.join(BASE_DIR, "joblib", "aldaw_wave_model.joblib")
+MODEL_META_FILE = os.path.join(BASE_DIR, "joblib", "aldaw_wave_model_meta.joblib")
+  # store metadata: last_trained_on (datetime)
 CACHE_DB = ".cache"
 OPENMETEO_LAT = 15.15
 OPENMETEO_LON = 120.5833
@@ -125,7 +127,9 @@ def prepare_features(df):
     y = df['heat_index'].copy()
     return X, y, df
 
-def save_all_predicted_heat_index(data_prepared, model, output_file="predicted_heat_index.csv"):
+def save_all_predicted_heat_index(data_prepared, model, output_file=None):
+    if output_file is None:
+        output_file = os.path.join(BASE_DIR, "dataset", "predicted_heat_index.csv")
     """
     Predicts heat index for each timestamp in the dataset and saves results hourly.
     Columns: time, predicted_heat_index, date, hour
@@ -344,7 +348,7 @@ def get_recommendation():
         return jsonify({"error": "Invalid date or time format. Use YYYY-MM-DD and HH:MM."}), 400
 
      # Try to load precomputed heat index for the given date
-    predicted_file = "predicted_heat_index.csv"
+    predicted_file = os.path.join(BASE_DIR, "dataset", "predicted_heat_index.csv")
     target_date = datetime.strptime(date_input, "%Y-%m-%d").date()
     hourly_for_date = None
 

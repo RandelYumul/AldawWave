@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aldaw-Wave Main Page</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="static/css/styles.css">
 </head>
 <body class="main-page">
 
   <nav class="sidebar">
     <div class="logo-container" onclick="toggleSidebar()">
-      <img src="assets/aldaw_logo.png" alt="Logo" class="logo">
+      <img src="static/assets/aldaw_logo.png" alt="Logo" class="logo">
       <span class="logo-text">Aldaw-Wave</span>
       <span class="toggle-icon">›</span>
     </div>
@@ -23,7 +23,7 @@
       </li>
       <li class="nav-item">
         <a href="about.html">
-          <img src="assets/Aboutlogo.png" alt="About" class="icon">
+          <img src="static/assets/Aboutlogo.png" alt="About" class="icon">
           <span class="nav-text">About</span>
         </a>
       </li>
@@ -48,21 +48,21 @@
             <div class="input-group with-icon">
               <label for="origin">Origin</label>
               <div class="input-wrapper">
-                <img src="assets/location.png" alt="Origin" class="input-icon">
+                <img src="static/assets/location.png" alt="Origin" class="input-icon">
                 <input type="text" id="origin" placeholder="Enter origin">
               </div>
             </div>
 
             <!-- Swap Button -->
             <div class="swap-btn" title="Swap origin and destination" onclick="swapInputs()">
-              <img src="assets/Arrow.png" alt="Swap" class="swap-icon">
+              <img src="static/assets/Arrow.png" alt="Swap" class="swap-icon">
             </div>
 
             <!-- Destination Input -->
             <div class="input-group with-icon">
               <label for="destination">Destination</label>
               <div class="input-wrapper">
-                <img src="assets/destination.png" alt="Destination" class="input-icon">
+                <img src="static/assets/destination.png" alt="Destination" class="input-icon">
                 <input type="text" id="destination" placeholder="Enter destination">
               </div>
             </div>
@@ -73,7 +73,7 @@
             <div class="input-group with-icon">
               <label for="date">Date</label>
               <div class="input-wrapper">
-                <img src="assets/calendar.png" alt="Date" class="input-icon">
+                <img src="static/assets/calendar.png" alt="Date" class="input-icon">
                 <input type="date" id="date">
               </div>
             </div>
@@ -84,7 +84,7 @@
               <div class="input-group with-icon">
                 <label for="time">Preferred Time</label>
                 <div class="input-wrapper">
-                  <img src="assets/clock.png" alt="Time" class="input-icon">
+                  <img src="static/assets/clock.png" alt="Time" class="input-icon">
                   <input type="time" id="time">
                 </div>
               </div>
@@ -128,7 +128,7 @@
     // Load Maps API dynamically
     loadGoogleMapsAPI();
   </script>
-  <script src="script.js"></script>
+  <script src="static/js/script.js"></script>
 
 </body>
 </html>
