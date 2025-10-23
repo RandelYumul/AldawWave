@@ -84,6 +84,7 @@ AldawWave/
 │ │ ├── angelesdataset.csv              # Main dataset containing collected weather data
 │ │ └── predicted_heat_index.csv        # Stores generated or saved heat index prediction results
 │ ├── joblib/
+│ │ ├── .gitkeep                        # Keeps the directory tracked in GitHub
 │ │ ├── aldaw_wave_model.joblib         # Trained machine learning model for heat index prediction
 │ │ └── aldaw_wave_model_meta.joblib    # Metadata file storing model details (e.g., last training date)
 │ ├── .env                              # Environment file (contains API keys and sensitive credentials)
@@ -103,6 +104,29 @@ This file contains sensitive environment variables such as **API keys** (for Goo
 - The `.env` file contains **private API keys** and **confidential configurations**.
 - Publishing it publicly can lead to **unauthorized access**, **API abuse**, or **quota exhaustion**.
 - Following best practices, the `.env` file is **listed in `.gitignore`** to prevent accidental upload to GitHub.
+
+---
+
+## Why `joblib` Files Are NOT Included in the Public Repository
+
+The `joblib/` folder contains the **trained machine learning models** (`.joblib` files) used by Aldaw-Wave.  
+These files are **not included** in the public repository for the following reasons:
+
+1. **Large File Size**  
+   - Model files can be several megabytes in size, which can unnecessarily increase the repository’s storage and cloning time.
+
+2. **Regeneration by the User**  
+   - These files are **automatically generated** when the user runs the model training script (`aldaw_wave_service.py`).  
+   - This ensures that users always have an **up-to-date and environment-specific** version of the model.
+
+3. **Version and Environment Differences**  
+   - Joblib files depend on the specific versions of libraries (e.g., scikit-learn, NumPy) installed in the environment.  
+   - Sharing them publicly can cause compatibility errors on other systems.
+
+4. **Best Practice for Reproducibility**  
+   - Instead of distributing pre-trained binary files, the repository includes the **training logic and dataset**, allowing users to reproduce and validate results on their own system.
+
+To keep the folder visible in GitHub, a **`.gitkeep`** file is included in the `joblib/` directory.
 
 ---
 
