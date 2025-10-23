@@ -86,10 +86,23 @@ AldawWave/
 │ ├── joblib/
 │ │ ├── aldaw_wave_model.joblib         # Trained machine learning model for heat index prediction
 │ │ └── aldaw_wave_model_meta.joblib    # Metadata file storing model details (e.g., last training date)
+│ ├── .env                              # Environment file (contains API keys and sensitive credentials)
 │ ├── aldaw_wave_service.py             # Core script handling ML logic, data preprocessing, and predictions
 │ └── requirements.txt                  # Lists all Python dependencies required to run the project
 └── README.md                           # Project documentation (you are here)          
 ```
+
+---
+
+## Environment Setup (`.env` File)
+
+The `.env` file **must be placed inside the `model/` folder**.  
+This file contains sensitive environment variables such as **API keys** (for Google Maps & Gemini), which are essential for the backend services to function properly.
+
+### ❗ Why `.env` is NOT included in the public repository
+- The `.env` file contains **private API keys** and **confidential configurations**.
+- Publishing it publicly can lead to **unauthorized access**, **API abuse**, or **quota exhaustion**.
+- Following best practices, the `.env` file is **listed in `.gitignore`** to prevent accidental upload to GitHub.
 
 ---
 
