@@ -100,6 +100,8 @@ AldawWave/
 The `.env` file **must be placed inside the `model/` folder**.  
 This file contains sensitive environment variables such as **API keys** (for Google Maps & Gemini), which are essential for the backend services to function properly.
 
+If you need access to the .env file for testing purposes, it may be requested directly from the developers.
+
 ### ❗ Why `.env` is NOT included in the public repository
 - The `.env` file contains **private API keys** and **confidential configurations**.
 - Publishing it publicly can lead to **unauthorized access**, **API abuse**, or **quota exhaustion**.
