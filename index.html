@@ -5,129 +5,149 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aldaw-Wave Main Page</title>
   <link rel="stylesheet" href="static/css/styles.css">
+  <style>
+    /* Prevent accidental blue highlight on mobile click */
+    * { -webkit-tap-highlight-color: transparent; }
+  </style>
 </head>
+
 <body class="main-page">
 
+  <!-- Sidebar -->
   <nav class="sidebar">
-    <div class="logo-container" onclick="toggleSidebar()">
+    <div class="logo-container">
       <img src="static/assets/aldaw_logo.png" alt="Logo" class="logo">
       <span class="logo-text">Aldaw-Wave</span>
       <span class="toggle-icon">›</span>
     </div>
+
     <ul class="nav-links">
       <li class="nav-item active">
         <a href="index.html">
-          <img src="https://icon2.cleanpng.com/20180519/lej/kisspng-computer-icons-house-clip-art-5b00157a03fb64.7246548815267321540163.jpg" alt="Home" class="icon">
+          <img src="https://icon2.cleanpng.com/20180519/lej/kisspng-computer-icons-house-clip-art-5b00157a03fb64.7246548815267321540163.jpg" class="icon">
           <span class="nav-text">Home</span>
         </a>
       </li>
+
       <li class="nav-item">
         <a href="about.html">
-          <img src="static/assets/Aboutlogo.png" alt="About" class="icon">
+          <img src="static/assets/Aboutlogo.png" class="icon">
           <span class="nav-text">About</span>
         </a>
       </li>
     </ul>
   </nav>
 
-    <div class="map-input-graph-reco">
-        <div class="floating-map">
 
-          <!-- Remove for now 
-          <iframe src="https://maps.google.com/maps?q=angeles%20city&t=&z=13&ie=UTF8&iwloc=&output=embed" onclick="window.location.href='maps.html'"></iframe>
-          <div class="floating-map__overlay" onclick="window.location.href='maps.html'">Open Interactive Map</div>
-          -->
+  <!-- Main Layout -->
+  <div class="map-input-graph-reco">
 
-          <div id="map"></div>
+    <!-- MAP -->
+    <div class="floating-map">
+      <div id="map"></div>
+    </div>
 
-        </div>
-          <!-- Form -->
-          <div class="bottom-panel">
 
-            <!-- Origin Input -->
-            <div class="input-group with-icon">
-              <label for="origin">Origin</label>
-              <div class="input-wrapper">
-                <img src="static/assets/location.png" alt="Origin" class="input-icon">
-                <input type="text" id="origin" placeholder="Enter origin">
-              </div>
-            </div>
+    <!-- INPUT PANEL -->
+    <div class="bottom-panel">
 
-            <!-- Swap Button -->
-            <div class="swap-btn" title="Swap origin and destination" onclick="swapInputs()">
-              <img src="static/assets/Arrow.png" alt="Swap" class="swap-icon">
-            </div>
-
-            <!-- Destination Input -->
-            <div class="input-group with-icon">
-              <label for="destination">Destination</label>
-              <div class="input-wrapper">
-                <img src="static/assets/destination.png" alt="Destination" class="input-icon">
-                <input type="text" id="destination" placeholder="Enter destination">
-              </div>
-            </div>
-
-            <div class="main-date-time-gap"></div>
-
-            <!-- Date Input -->
-            <div class="input-group with-icon">
-              <label for="date">Date</label>
-              <div class="input-wrapper">
-                <img src="static/assets/calendar.png" alt="Date" class="input-icon">
-                <input type="date" id="date">
-              </div>
-            </div>
-
-            <div class="main-date-time-gap"></div>
-
-            <!-- Preferred Time Input -->
-              <div class="input-group with-icon">
-                <label for="time">Preferred Time</label>
-                <div class="input-wrapper">
-                  <img src="static/assets/clock.png" alt="Time" class="input-icon">
-                  <input type="time" id="time">
-                </div>
-              </div>
-
-            <!-- Button -->
-            <div class="btn-display">
-                <p id="travel-time-display"></p>
-                <button onclick="showRecommendations()" id="showGraphBtn">Find Recommendation</button>
-            </div>
-          </div>
-      
-      <div class="graph-reco">
-        <div class="graph-container">
-          <p id="graph-placeholder">Input your route and time to see the hourly heat index forecast graph.</p>
-        </div>
-        <div class="reco-container">
-          <p id="reco-placeholder">Departure recommendations and travel tips will appear here.</p>
+      <!-- Origin -->
+      <div class="input-group with-icon">
+        <label for="origin">Origin</label>
+        <div class="input-wrapper">
+          <img src="static/assets/location.png" class="input-icon">
+          <input type="text" id="origin" placeholder="Enter origin">
         </div>
       </div>
+
+      <!-- Swap -->
+      <div class="swap-btn" title="Swap origin and destination">
+        <img src="static/assets/Arrow.png" class="swap-icon">
+      </div>
+
+      <!-- Destination -->
+      <div class="input-group with-icon">
+        <label for="destination">Destination</label>
+        <div class="input-wrapper">
+          <img src="static/assets/destination.png" class="input-icon">
+          <input type="text" id="destination" placeholder="Enter destination">
+        </div>
+      </div>
+
+      <div class="main-date-time-gap"></div>
+
+      <!-- Date -->
+      <div class="input-group with-icon">
+        <label for="date">Date</label>
+        <div class="input-wrapper">
+          <img src="static/assets/calendar.png" class="input-icon">
+          <input type="date" id="date">
+        </div>
+      </div>
+
+      <div class="main-date-time-gap"></div>
+
+      <!-- Time -->
+      <div class="input-group with-icon">
+        <label for="time">Preferred Time</label>
+        <div class="input-wrapper">
+          <img src="static/assets/clock.png" class="input-icon">
+          <input type="time" id="time">
+        </div>
+      </div>
+
+      <!-- Button -->
+      <div class="btn-display">
+        <p id="travel-time-display"></p>
+        <button id="showGraphBtn" type="button">Find Recommendation</button>
+      </div>
+
     </div>
-    
+
+
+
+    <!-- Graph + Recommendations -->
+    <div class="graph-reco" style="display: none;">
+      <div class="graph-container">
+        <p id="graph-placeholder">Input your route and time to see the hourly heat index forecast graph.</p>
+      </div>
+
+      <div class="reco-container">
+        <p id="reco-placeholder">Travel tips will appear here.</p>
+      </div>
+
+      <div class="reco-time-container">
+        <p id="reco-time-placeholder">Departure recommendations time will appear here.</p>
+      </div>
+    </div>
+
   </div>
 
+
+
+
+  <!-- Load Google Maps API Dynamically -->
   <script>
-  async function loadGoogleMapsAPI() {
-    try {
-      const response = await fetch("http://127.0.0.1:5000/get_api_key");
-      const data = await response.json();
-      const apiKey = data.key;
+    async function loadGoogleMapsAPI() {
+      try {
+        const response = await fetch("http://127.0.0.1:5000/get_api_key");
+        const data = await response.json();
+        const apiKey = data.key;
 
-      const script = document.createElement("script");
-      script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places&callback=initMap`;
-      script.async = true;
-      script.defer = true;
-      document.head.appendChild(script);
-    } catch (error) {
-      console.error("Failed to load Google Maps API:", error);
+        const script = document.createElement("script");
+        script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places&callback=initMap`;
+        script.async = true;
+        script.defer = true;
+        document.head.appendChild(script);
+      } catch (error) {
+        console.error("Failed to load Google Maps API:", error);
+      }
     }
-  }
 
-    // Load Maps API dynamically
     loadGoogleMapsAPI();
   </script>
+
+  <!-- Main JS -->
   <script src="static/js/script.js"></script>
 
 </body>

@@ -1,0 +1,361 @@
+time,location,temperature_2m (°C),relative_humidity_2m (%),heat_index (°C),hour,heat_index,destination,city,latitude,longitude
+2025-11-15 00:00:00,,24.4,92.0,,0,24.247485633831086,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15 01:00:00,,24.4,91.0,,1,24.314073194915466,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15 02:00:00,,25.3,85.0,,2,26.368283829395686,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15 03:00:00,,25.0,85.0,,3,25.77776985555558,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15 04:00:00,,24.9,84.0,,4,25.613684762131108,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15 05:00:00,,24.6,86.0,,5,24.98731087820441,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15 06:00:00,,24.2,87.0,,6,24.198074674257786,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15 07:00:00,,25.1,87.0,,7,25.937977892097788,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15 08:00:00,,25.7,83.0,,8,27.15837992047113,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15 09:00:00,,26.9,79.0,,9,29.432254667475515,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15 10:00:00,,27.7,78.0,,10,31.093959553837745,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15 11:00:00,,27.7,82.0,,11,31.63672407753552,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15 12:00:00,,28.4,78.0,,12,32.76911040561793,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15 13:00:00,,28.9,74.0,,13,33.254532132931104,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15 14:00:00,,29.0,73.0,,14,33.29787407955561,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15 15:00:00,,28.5,72.0,,15,31.987993963944504,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15 16:00:00,,27.6,81.0,,16,31.25201924140456,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15 17:00:00,,26.7,85.0,,17,29.48056154619557,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15 18:00:00,,25.8,87.0,,18,27.4625964342579,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15 19:00:00,,25.1,90.0,,19,25.88044007130439,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15 20:00:00,,25.0,89.0,,20,25.682844077777872,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15 21:00:00,,24.8,88.0,,21,25.294258238115603,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15 22:00:00,,24.7,88.0,,22,25.091946538815616,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15 23:00:00,,24.6,90.0,,23,24.79217265420438,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15T00:00:00,,24.4,92.0,,0,24.247485633831086,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15T01:00:00,,24.4,91.0,,1,24.314073194915466,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15T02:00:00,,25.3,85.0,,2,26.368283829395686,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15T03:00:00,,25.0,85.0,,3,25.77776985555558,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15T04:00:00,,24.9,84.0,,4,25.613684762131108,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15T05:00:00,,24.6,86.0,,5,24.98731087820441,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15T06:00:00,,24.2,87.0,,6,24.198074674257786,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15T07:00:00,,25.1,87.0,,7,25.937977892097788,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15T08:00:00,,25.7,83.0,,8,27.15837992047113,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15T09:00:00,,26.9,79.0,,9,29.432254667475515,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15T10:00:00,,27.7,78.0,,10,31.093959553837745,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15T11:00:00,,27.7,82.0,,11,31.63672407753552,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15T12:00:00,,28.4,78.0,,12,32.76911040561793,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15T13:00:00,,28.9,74.0,,13,33.254532132931104,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15T14:00:00,,29.0,73.0,,14,33.29787407955561,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15T15:00:00,,28.5,72.0,,15,31.987993963944504,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15T16:00:00,,27.6,81.0,,16,31.25201924140456,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15T17:00:00,,26.7,85.0,,17,29.48056154619557,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15T18:00:00,,25.8,87.0,,18,27.4625964342579,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15T19:00:00,,25.1,90.0,,19,25.88044007130439,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15T20:00:00,,25.0,89.0,,20,25.682844077777872,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15T21:00:00,,24.8,88.0,,21,25.294258238115603,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15T22:00:00,,24.7,88.0,,22,25.091946538815616,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15T23:00:00,,24.6,90.0,,23,24.79217265420438,Holy Angel University,Angeles City,15.15,120.58
+2025-11-15T00:00:00,,24.4,92.0,,0,24.247485633831086,"Holy Angel University, Holy Angel Street, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T01:00:00,,24.4,91.0,,1,24.314073194915466,"Holy Angel University, Holy Angel Street, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T02:00:00,,25.3,85.0,,2,26.368283829395686,"Holy Angel University, Holy Angel Street, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T03:00:00,,25.0,85.0,,3,25.77776985555558,"Holy Angel University, Holy Angel Street, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T04:00:00,,24.9,84.0,,4,25.613684762131108,"Holy Angel University, Holy Angel Street, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T05:00:00,,24.6,86.0,,5,24.98731087820441,"Holy Angel University, Holy Angel Street, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T06:00:00,,24.2,87.0,,6,24.198074674257786,"Holy Angel University, Holy Angel Street, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T07:00:00,,25.1,87.0,,7,25.937977892097788,"Holy Angel University, Holy Angel Street, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T08:00:00,,25.7,83.0,,8,27.15837992047113,"Holy Angel University, Holy Angel Street, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T09:00:00,,26.9,79.0,,9,29.432254667475515,"Holy Angel University, Holy Angel Street, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T10:00:00,,27.7,78.0,,10,31.093959553837745,"Holy Angel University, Holy Angel Street, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T11:00:00,,27.7,82.0,,11,31.63672407753552,"Holy Angel University, Holy Angel Street, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T12:00:00,,28.4,78.0,,12,32.76911040561793,"Holy Angel University, Holy Angel Street, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T13:00:00,,28.9,74.0,,13,33.254532132931104,"Holy Angel University, Holy Angel Street, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T14:00:00,,29.0,73.0,,14,33.29787407955561,"Holy Angel University, Holy Angel Street, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T15:00:00,,28.5,72.0,,15,31.987993963944504,"Holy Angel University, Holy Angel Street, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T16:00:00,,27.6,81.0,,16,31.25201924140456,"Holy Angel University, Holy Angel Street, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T17:00:00,,26.7,85.0,,17,29.48056154619557,"Holy Angel University, Holy Angel Street, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T18:00:00,,25.8,87.0,,18,27.4625964342579,"Holy Angel University, Holy Angel Street, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T19:00:00,,25.1,90.0,,19,25.88044007130439,"Holy Angel University, Holy Angel Street, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T20:00:00,,25.0,89.0,,20,25.682844077777872,"Holy Angel University, Holy Angel Street, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T21:00:00,,24.8,88.0,,21,25.294258238115603,"Holy Angel University, Holy Angel Street, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T22:00:00,,24.7,88.0,,22,25.091946538815616,"Holy Angel University, Holy Angel Street, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T23:00:00,,24.6,90.0,,23,24.79217265420438,"Holy Angel University, Holy Angel Street, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T00:00:00,,24.4,92.0,,0,24.247485633831086,Marquee Mall by Ayala Malls,Angeles City,15.15,120.58
+2025-11-15T01:00:00,,24.4,91.0,,1,24.314073194915466,Marquee Mall by Ayala Malls,Angeles City,15.15,120.58
+2025-11-15T02:00:00,,25.3,85.0,,2,26.368283829395686,Marquee Mall by Ayala Malls,Angeles City,15.15,120.58
+2025-11-15T03:00:00,,25.0,85.0,,3,25.77776985555558,Marquee Mall by Ayala Malls,Angeles City,15.15,120.58
+2025-11-15T04:00:00,,24.9,84.0,,4,25.613684762131108,Marquee Mall by Ayala Malls,Angeles City,15.15,120.58
+2025-11-15T05:00:00,,24.6,86.0,,5,24.98731087820441,Marquee Mall by Ayala Malls,Angeles City,15.15,120.58
+2025-11-15T06:00:00,,24.2,87.0,,6,24.198074674257786,Marquee Mall by Ayala Malls,Angeles City,15.15,120.58
+2025-11-15T07:00:00,,25.1,87.0,,7,25.937977892097788,Marquee Mall by Ayala Malls,Angeles City,15.15,120.58
+2025-11-15T08:00:00,,25.7,83.0,,8,27.15837992047113,Marquee Mall by Ayala Malls,Angeles City,15.15,120.58
+2025-11-15T09:00:00,,26.9,79.0,,9,29.432254667475515,Marquee Mall by Ayala Malls,Angeles City,15.15,120.58
+2025-11-15T10:00:00,,27.7,78.0,,10,31.093959553837745,Marquee Mall by Ayala Malls,Angeles City,15.15,120.58
+2025-11-15T11:00:00,,27.7,82.0,,11,31.63672407753552,Marquee Mall by Ayala Malls,Angeles City,15.15,120.58
+2025-11-15T12:00:00,,28.4,78.0,,12,32.76911040561793,Marquee Mall by Ayala Malls,Angeles City,15.15,120.58
+2025-11-15T13:00:00,,28.9,74.0,,13,33.254532132931104,Marquee Mall by Ayala Malls,Angeles City,15.15,120.58
+2025-11-15T14:00:00,,29.0,73.0,,14,33.29787407955561,Marquee Mall by Ayala Malls,Angeles City,15.15,120.58
+2025-11-15T15:00:00,,28.5,72.0,,15,31.987993963944504,Marquee Mall by Ayala Malls,Angeles City,15.15,120.58
+2025-11-15T16:00:00,,27.6,81.0,,16,31.25201924140456,Marquee Mall by Ayala Malls,Angeles City,15.15,120.58
+2025-11-15T17:00:00,,26.7,85.0,,17,29.48056154619557,Marquee Mall by Ayala Malls,Angeles City,15.15,120.58
+2025-11-15T18:00:00,,25.8,87.0,,18,27.4625964342579,Marquee Mall by Ayala Malls,Angeles City,15.15,120.58
+2025-11-15T19:00:00,,25.1,90.0,,19,25.88044007130439,Marquee Mall by Ayala Malls,Angeles City,15.15,120.58
+2025-11-15T20:00:00,,25.0,89.0,,20,25.682844077777872,Marquee Mall by Ayala Malls,Angeles City,15.15,120.58
+2025-11-15T21:00:00,,24.8,88.0,,21,25.294258238115603,Marquee Mall by Ayala Malls,Angeles City,15.15,120.58
+2025-11-15T22:00:00,,24.7,88.0,,22,25.091946538815616,Marquee Mall by Ayala Malls,Angeles City,15.15,120.58
+2025-11-15T23:00:00,,24.6,90.0,,23,24.79217265420438,Marquee Mall by Ayala Malls,Angeles City,15.15,120.58
+2025-11-15T00:00:00,,24.4,92.0,,0,24.247485633831086,"Marquee Mall by Ayala Malls, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T01:00:00,,24.4,91.0,,1,24.314073194915466,"Marquee Mall by Ayala Malls, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T02:00:00,,25.3,85.0,,2,26.368283829395686,"Marquee Mall by Ayala Malls, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T03:00:00,,25.0,85.0,,3,25.77776985555558,"Marquee Mall by Ayala Malls, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T04:00:00,,24.9,84.0,,4,25.613684762131108,"Marquee Mall by Ayala Malls, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T05:00:00,,24.6,86.0,,5,24.98731087820441,"Marquee Mall by Ayala Malls, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T06:00:00,,24.2,87.0,,6,24.198074674257786,"Marquee Mall by Ayala Malls, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T07:00:00,,25.1,87.0,,7,25.937977892097788,"Marquee Mall by Ayala Malls, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T08:00:00,,25.7,83.0,,8,27.15837992047113,"Marquee Mall by Ayala Malls, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T09:00:00,,26.9,79.0,,9,29.432254667475515,"Marquee Mall by Ayala Malls, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T10:00:00,,27.7,78.0,,10,31.093959553837745,"Marquee Mall by Ayala Malls, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T11:00:00,,27.7,82.0,,11,31.63672407753552,"Marquee Mall by Ayala Malls, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T12:00:00,,28.4,78.0,,12,32.76911040561793,"Marquee Mall by Ayala Malls, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T13:00:00,,28.9,74.0,,13,33.254532132931104,"Marquee Mall by Ayala Malls, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T14:00:00,,29.0,73.0,,14,33.29787407955561,"Marquee Mall by Ayala Malls, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T15:00:00,,28.5,72.0,,15,31.987993963944504,"Marquee Mall by Ayala Malls, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T16:00:00,,27.6,81.0,,16,31.25201924140456,"Marquee Mall by Ayala Malls, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T17:00:00,,26.7,85.0,,17,29.48056154619557,"Marquee Mall by Ayala Malls, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T18:00:00,,25.8,87.0,,18,27.4625964342579,"Marquee Mall by Ayala Malls, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T19:00:00,,25.1,90.0,,19,25.88044007130439,"Marquee Mall by Ayala Malls, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T20:00:00,,25.0,89.0,,20,25.682844077777872,"Marquee Mall by Ayala Malls, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T21:00:00,,24.8,88.0,,21,25.294258238115603,"Marquee Mall by Ayala Malls, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T22:00:00,,24.7,88.0,,22,25.091946538815616,"Marquee Mall by Ayala Malls, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T23:00:00,,24.6,90.0,,23,24.79217265420438,"Marquee Mall by Ayala Malls, Angeles, Pampanga, Philippines",Angeles City,15.15,120.58
+2025-11-15T00:00:00,,25.8,88.0,,0,27.48741907651568,Holy Cross Memorial Park,Quezon City,14.65,121.05
+2025-11-15T01:00:00,,25.4,90.0,,1,26.571256582204487,Holy Cross Memorial Park,Quezon City,14.65,121.05
+2025-11-15T02:00:00,,25.7,87.0,,2,27.235613759457824,Holy Cross Memorial Park,Quezon City,14.65,121.05
+2025-11-15T03:00:00,,25.7,87.0,,3,27.235613759457824,Holy Cross Memorial Park,Quezon City,14.65,121.05
+2025-11-15T04:00:00,,25.4,89.0,,4,26.57246453089784,Holy Cross Memorial Park,Quezon City,14.65,121.05
+2025-11-15T05:00:00,,25.3,90.0,,5,26.337829740184457,Holy Cross Memorial Park,Quezon City,14.65,121.05
+2025-11-15T06:00:00,,25.1,91.0,,6,25.859370887315503,Holy Cross Memorial Park,Quezon City,14.65,121.05
+2025-11-15T07:00:00,,25.5,89.0,,7,26.80267779577785,Holy Cross Memorial Park,Quezon City,14.65,121.05
+2025-11-15T08:00:00,,26.3,85.0,,8,28.531415670995614,Holy Cross Memorial Park,Quezon City,14.65,121.05
+2025-11-15T09:00:00,,26.9,84.0,,9,29.880478389331,Holy Cross Memorial Park,Quezon City,14.65,121.05
+2025-11-15T10:00:00,,28.4,75.0,,10,32.25915318247125,Holy Cross Memorial Park,Quezon City,14.65,121.05
+2025-11-15T11:00:00,,30.1,68.0,,11,34.7963550685846,Holy Cross Memorial Park,Quezon City,14.65,121.05
+2025-11-15T12:00:00,,30.6,65.0,,12,35.21891191607106,Holy Cross Memorial Park,Quezon City,14.65,121.05
+2025-11-15T13:00:00,,31.0,63.0,,13,35.6165008484444,Holy Cross Memorial Park,Quezon City,14.65,121.05
+2025-11-15T14:00:00,,30.9,61.0,,14,34.88114928571564,Holy Cross Memorial Park,Quezon City,14.65,121.05
+2025-11-15T15:00:00,,30.0,65.0,,15,33.88214561111116,Holy Cross Memorial Park,Quezon City,14.65,121.05
+2025-11-15T16:00:00,,29.3,68.0,,16,32.99739132330451,Holy Cross Memorial Park,Quezon City,14.65,121.05
+2025-11-15T17:00:00,,28.9,70.0,,17,32.50994487721562,Holy Cross Memorial Park,Quezon City,14.65,121.05
+2025-11-15T18:00:00,,28.2,74.0,,18,31.64868504519108,Holy Cross Memorial Park,Quezon City,14.65,121.05
+2025-11-15T19:00:00,,27.6,80.0,,19,31.121516145937942,Holy Cross Memorial Park,Quezon City,14.65,121.05
+2025-11-15T20:00:00,,27.0,86.0,,20,30.323923728444413,Holy Cross Memorial Park,Quezon City,14.65,121.05
+2025-11-15T21:00:00,,26.6,88.0,,21,29.464550599395736,Holy Cross Memorial Park,Quezon City,14.65,121.05
+2025-11-15T22:00:00,,26.1,88.0,,22,28.205655600495746,Holy Cross Memorial Park,Quezon City,14.65,121.05
+2025-11-15T23:00:00,,26.0,86.0,,23,27.888363300444457,Holy Cross Memorial Park,Quezon City,14.65,121.05
+2025-11-15T00:00:00,,25.8,88.0,,0,27.48741907651568,Smart Araneta Coliseum,Quezon City,14.65,121.05
+2025-11-15T01:00:00,,25.4,90.0,,1,26.571256582204487,Smart Araneta Coliseum,Quezon City,14.65,121.05
+2025-11-15T02:00:00,,25.7,87.0,,2,27.235613759457824,Smart Araneta Coliseum,Quezon City,14.65,121.05
+2025-11-15T03:00:00,,25.7,87.0,,3,27.235613759457824,Smart Araneta Coliseum,Quezon City,14.65,121.05
+2025-11-15T04:00:00,,25.4,89.0,,4,26.57246453089784,Smart Araneta Coliseum,Quezon City,14.65,121.05
+2025-11-15T05:00:00,,25.3,90.0,,5,26.337829740184457,Smart Araneta Coliseum,Quezon City,14.65,121.05
+2025-11-15T06:00:00,,25.1,91.0,,6,25.859370887315503,Smart Araneta Coliseum,Quezon City,14.65,121.05
+2025-11-15T07:00:00,,25.5,89.0,,7,26.80267779577785,Smart Araneta Coliseum,Quezon City,14.65,121.05
+2025-11-15T08:00:00,,26.3,85.0,,8,28.531415670995614,Smart Araneta Coliseum,Quezon City,14.65,121.05
+2025-11-15T09:00:00,,26.9,84.0,,9,29.880478389331,Smart Araneta Coliseum,Quezon City,14.65,121.05
+2025-11-15T10:00:00,,28.4,75.0,,10,32.25915318247125,Smart Araneta Coliseum,Quezon City,14.65,121.05
+2025-11-15T11:00:00,,30.1,68.0,,11,34.7963550685846,Smart Araneta Coliseum,Quezon City,14.65,121.05
+2025-11-15T12:00:00,,30.6,65.0,,12,35.21891191607106,Smart Araneta Coliseum,Quezon City,14.65,121.05
+2025-11-15T13:00:00,,31.0,63.0,,13,35.6165008484444,Smart Araneta Coliseum,Quezon City,14.65,121.05
+2025-11-15T14:00:00,,30.9,61.0,,14,34.88114928571564,Smart Araneta Coliseum,Quezon City,14.65,121.05
+2025-11-15T15:00:00,,30.0,65.0,,15,33.88214561111116,Smart Araneta Coliseum,Quezon City,14.65,121.05
+2025-11-15T16:00:00,,29.3,68.0,,16,32.99739132330451,Smart Araneta Coliseum,Quezon City,14.65,121.05
+2025-11-15T17:00:00,,28.9,70.0,,17,32.50994487721562,Smart Araneta Coliseum,Quezon City,14.65,121.05
+2025-11-15T18:00:00,,28.2,74.0,,18,31.64868504519108,Smart Araneta Coliseum,Quezon City,14.65,121.05
+2025-11-15T19:00:00,,27.6,80.0,,19,31.121516145937942,Smart Araneta Coliseum,Quezon City,14.65,121.05
+2025-11-15T20:00:00,,27.0,86.0,,20,30.323923728444413,Smart Araneta Coliseum,Quezon City,14.65,121.05
+2025-11-15T21:00:00,,26.6,88.0,,21,29.464550599395736,Smart Araneta Coliseum,Quezon City,14.65,121.05
+2025-11-15T22:00:00,,26.1,88.0,,22,28.205655600495746,Smart Araneta Coliseum,Quezon City,14.65,121.05
+2025-11-15T23:00:00,,26.0,86.0,,23,27.888363300444457,Smart Araneta Coliseum,Quezon City,14.65,121.05
+2025-11-15T00:00:00,,25.8,88.0,,0,27.48741907651568,"Smart Araneta Coliseum, General Roxas Avenue, Cubao, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T01:00:00,,25.4,90.0,,1,26.571256582204487,"Smart Araneta Coliseum, General Roxas Avenue, Cubao, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T02:00:00,,25.7,87.0,,2,27.235613759457824,"Smart Araneta Coliseum, General Roxas Avenue, Cubao, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T03:00:00,,25.7,87.0,,3,27.235613759457824,"Smart Araneta Coliseum, General Roxas Avenue, Cubao, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T04:00:00,,25.4,89.0,,4,26.57246453089784,"Smart Araneta Coliseum, General Roxas Avenue, Cubao, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T05:00:00,,25.3,90.0,,5,26.337829740184457,"Smart Araneta Coliseum, General Roxas Avenue, Cubao, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T06:00:00,,25.1,91.0,,6,25.859370887315503,"Smart Araneta Coliseum, General Roxas Avenue, Cubao, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T07:00:00,,25.5,89.0,,7,26.80267779577785,"Smart Araneta Coliseum, General Roxas Avenue, Cubao, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T08:00:00,,26.3,85.0,,8,28.531415670995614,"Smart Araneta Coliseum, General Roxas Avenue, Cubao, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T09:00:00,,26.9,84.0,,9,29.880478389331,"Smart Araneta Coliseum, General Roxas Avenue, Cubao, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T10:00:00,,28.4,75.0,,10,32.25915318247125,"Smart Araneta Coliseum, General Roxas Avenue, Cubao, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T11:00:00,,30.1,68.0,,11,34.7963550685846,"Smart Araneta Coliseum, General Roxas Avenue, Cubao, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T12:00:00,,30.6,65.0,,12,35.21891191607106,"Smart Araneta Coliseum, General Roxas Avenue, Cubao, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T13:00:00,,31.0,63.0,,13,35.6165008484444,"Smart Araneta Coliseum, General Roxas Avenue, Cubao, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T14:00:00,,30.9,60.0,,14,34.63461998783789,"Smart Araneta Coliseum, General Roxas Avenue, Cubao, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T15:00:00,,30.7,60.0,,15,34.21899485351784,"Smart Araneta Coliseum, General Roxas Avenue, Cubao, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T16:00:00,,30.2,63.0,,16,33.86477731500452,"Smart Araneta Coliseum, General Roxas Avenue, Cubao, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T17:00:00,,29.3,66.0,,17,32.61457610285113,"Smart Araneta Coliseum, General Roxas Avenue, Cubao, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T18:00:00,,28.5,71.0,,18,31.8254669437778,"Smart Araneta Coliseum, General Roxas Avenue, Cubao, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T19:00:00,,27.6,80.0,,19,31.121516145937942,"Smart Araneta Coliseum, General Roxas Avenue, Cubao, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T20:00:00,,26.9,83.0,,20,29.7888413441511,"Smart Araneta Coliseum, General Roxas Avenue, Cubao, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T21:00:00,,26.5,84.0,,21,28.932269870611226,"Smart Araneta Coliseum, General Roxas Avenue, Cubao, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T22:00:00,,26.4,84.0,,22,28.702627881031106,"Smart Araneta Coliseum, General Roxas Avenue, Cubao, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T23:00:00,,26.3,83.0,,23,28.420838497271184,"Smart Araneta Coliseum, General Roxas Avenue, Cubao, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T00:00:00,,26.1,88.0,,0,28.205655600495746,"Valenzuela City People's Park, MacArthur Highway, Valenzuela, Metro Manila, Philippines",Valenzuela,14.6921634,120.9701195
+2025-11-15T01:00:00,,25.7,90.0,,1,27.29046513858456,"Valenzuela City People's Park, MacArthur Highway, Valenzuela, Metro Manila, Philippines",Valenzuela,14.6921634,120.9701195
+2025-11-15T02:00:00,,25.9,87.0,,2,27.692639117697848,"Valenzuela City People's Park, MacArthur Highway, Valenzuela, Metro Manila, Philippines",Valenzuela,14.6921634,120.9701195
+2025-11-15T03:00:00,,25.9,87.0,,3,27.692639117697848,"Valenzuela City People's Park, MacArthur Highway, Valenzuela, Metro Manila, Philippines",Valenzuela,14.6921634,120.9701195
+2025-11-15T04:00:00,,25.7,89.0,,4,27.272474107457825,"Valenzuela City People's Park, MacArthur Highway, Valenzuela, Metro Manila, Philippines",Valenzuela,14.6921634,120.9701195
+2025-11-15T05:00:00,,25.5,90.0,,5,26.8078380959446,"Valenzuela City People's Park, MacArthur Highway, Valenzuela, Metro Manila, Philippines",Valenzuela,14.6921634,120.9701195
+2025-11-15T06:00:00,,25.3,91.0,,6,26.32955796939554,"Valenzuela City People's Park, MacArthur Highway, Valenzuela, Metro Manila, Philippines",Valenzuela,14.6921634,120.9701195
+2025-11-15T07:00:00,,25.7,89.0,,7,27.272474107457825,"Valenzuela City People's Park, MacArthur Highway, Valenzuela, Metro Manila, Philippines",Valenzuela,14.6921634,120.9701195
+2025-11-15T08:00:00,,26.6,85.0,,8,29.238780802115723,"Valenzuela City People's Park, MacArthur Highway, Valenzuela, Metro Manila, Philippines",Valenzuela,14.6921634,120.9701195
+2025-11-15T09:00:00,,27.1,84.0,,9,30.37236698493127,"Valenzuela City People's Park, MacArthur Highway, Valenzuela, Metro Manila, Philippines",Valenzuela,14.6921634,120.9701195
+2025-11-15T10:00:00,,28.7,75.0,,10,32.96471098975103,"Valenzuela City People's Park, MacArthur Highway, Valenzuela, Metro Manila, Philippines",Valenzuela,14.6921634,120.9701195
+2025-11-15T11:00:00,,30.3,68.0,,11,35.270401307704574,"Valenzuela City People's Park, MacArthur Highway, Valenzuela, Metro Manila, Philippines",Valenzuela,14.6921634,120.9701195
+2025-11-15T12:00:00,,30.9,65.0,,12,35.91870161327123,"Valenzuela City People's Park, MacArthur Highway, Valenzuela, Metro Manila, Philippines",Valenzuela,14.6921634,120.9701195
+2025-11-15T13:00:00,,31.2,63.0,,13,36.0769945446045,"Valenzuela City People's Park, MacArthur Highway, Valenzuela, Metro Manila, Philippines",Valenzuela,14.6921634,120.9701195
+2025-11-15T14:00:00,,31.1,60.0,,14,35.05884517223792,"Valenzuela City People's Park, MacArthur Highway, Valenzuela, Metro Manila, Philippines",Valenzuela,14.6921634,120.9701195
+2025-11-15T15:00:00,,30.9,60.0,,15,34.63461998783789,"Valenzuela City People's Park, MacArthur Highway, Valenzuela, Metro Manila, Philippines",Valenzuela,14.6921634,120.9701195
+2025-11-15T16:00:00,,30.4,63.0,,16,34.28917051068451,"Valenzuela City People's Park, MacArthur Highway, Valenzuela, Metro Manila, Philippines",Valenzuela,14.6921634,120.9701195
+2025-11-15T17:00:00,,29.6,66.0,,17,33.23910134327106,"Valenzuela City People's Park, MacArthur Highway, Valenzuela, Metro Manila, Philippines",Valenzuela,14.6921634,120.9701195
+2025-11-15T18:00:00,,28.7,71.0,,18,32.25338873081775,"Valenzuela City People's Park, MacArthur Highway, Valenzuela, Metro Manila, Philippines",Valenzuela,14.6921634,120.9701195
+2025-11-15T19:00:00,,27.8,80.0,,19,31.60462574721783,"Valenzuela City People's Park, MacArthur Highway, Valenzuela, Metro Manila, Philippines",Valenzuela,14.6921634,120.9701195
+2025-11-15T20:00:00,,27.2,83.0,,20,30.51242186887119,"Valenzuela City People's Park, MacArthur Highway, Valenzuela, Metro Manila, Philippines",Valenzuela,14.6921634,120.9701195
+2025-11-15T21:00:00,,26.8,84.0,,21,29.63898017559116,"Valenzuela City People's Park, MacArthur Highway, Valenzuela, Metro Manila, Philippines",Valenzuela,14.6921634,120.9701195
+2025-11-15T22:00:00,,26.6,84.0,,22,29.164875916231228,"Valenzuela City People's Park, MacArthur Highway, Valenzuela, Metro Manila, Philippines",Valenzuela,14.6921634,120.9701195
+2025-11-15T23:00:00,,26.5,83.0,,23,28.86511230511113,"Valenzuela City People's Park, MacArthur Highway, Valenzuela, Metro Manila, Philippines",Valenzuela,14.6921634,120.9701195
+2025-11-15T00:00:00,,24.8,97.0,,0,24.91106733043553,Cebu Ocean Park,Cebu City,10.32,123.89
+2025-11-15T01:00:00,,24.8,98.0,,1,24.862125632337857,Cebu Ocean Park,Cebu City,10.32,123.89
+2025-11-15T02:00:00,,24.8,97.0,,2,24.91106733043553,Cebu Ocean Park,Cebu City,10.32,123.89
+2025-11-15T03:00:00,,24.8,98.0,,3,24.862125632337857,Cebu Ocean Park,Cebu City,10.32,123.89
+2025-11-15T04:00:00,,24.8,96.0,,4,24.958736042417925,Cebu Ocean Park,Cebu City,10.32,123.89
+2025-11-15T05:00:00,,24.8,96.0,,5,24.958736042417925,Cebu Ocean Park,Cebu City,10.32,123.89
+2025-11-15T06:00:00,,24.9,95.0,,6,25.2553264674044,Cebu Ocean Park,Cebu City,10.32,123.89
+2025-11-15T07:00:00,,25.7,93.0,,7,27.34268166047121,Cebu Ocean Park,Cebu City,10.32,123.89
+2025-11-15T08:00:00,,27.0,89.0,,8,30.63066804577769,Cebu Ocean Park,Cebu City,10.32,123.89
+2025-11-15T09:00:00,,27.6,82.0,,9,31.384260824675703,Cebu Ocean Park,Cebu City,10.32,123.89
+2025-11-15T10:00:00,,28.5,78.0,,10,33.01949079927781,Cebu Ocean Park,Cebu City,10.32,123.89
+2025-11-15T11:00:00,,27.8,83.0,,11,32.03874112087114,Cebu Ocean Park,Cebu City,10.32,123.89
+2025-11-15T12:00:00,,27.3,91.0,,12,31.732335484595623,Cebu Ocean Park,Cebu City,10.32,123.89
+2025-11-15T13:00:00,,25.7,92.0,,13,27.32556891509116,Cebu Ocean Park,Cebu City,10.32,123.89
+2025-11-15T14:00:00,,25.7,94.0,,14,27.35950164393557,Cebu Ocean Park,Cebu City,10.32,123.89
+2025-11-15T15:00:00,,26.1,93.0,,15,28.426498570551303,Cebu Ocean Park,Cebu City,10.32,123.89
+2025-11-15T16:00:00,,26.4,91.0,,16,29.1433815965156,Cebu Ocean Park,Cebu City,10.32,123.89
+2025-11-15T17:00:00,,26.1,91.0,,17,28.33774387851573,Cebu Ocean Park,Cebu City,10.32,123.89
+2025-11-15T18:00:00,,25.7,93.0,,18,27.34268166047121,Cebu Ocean Park,Cebu City,10.32,123.89
+2025-11-15T19:00:00,,25.3,94.0,,19,26.30038075113568,Cebu Ocean Park,Cebu City,10.32,123.89
+2025-11-15T20:00:00,,25.1,94.0,,20,25.79049360417561,Cebu Ocean Park,Cebu City,10.32,123.89
+2025-11-15T21:00:00,,25.1,94.0,,21,25.79049360417561,Cebu Ocean Park,Cebu City,10.32,123.89
+2025-11-15T22:00:00,,25.0,95.0,,22,25.508830744444506,Cebu Ocean Park,Cebu City,10.32,123.89
+2025-11-15T23:00:00,,24.9,95.0,,23,25.2553264674044,Cebu Ocean Park,Cebu City,10.32,123.89
+2025-11-15T00:00:00,,25.8,88.0,,0,27.48741907651568,"Holy Cross Memorial Park, Quirino, Novaliches, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T01:00:00,,25.4,90.0,,1,26.571256582204487,"Holy Cross Memorial Park, Quirino, Novaliches, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T02:00:00,,25.7,87.0,,2,27.235613759457824,"Holy Cross Memorial Park, Quirino, Novaliches, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T03:00:00,,25.7,87.0,,3,27.235613759457824,"Holy Cross Memorial Park, Quirino, Novaliches, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T04:00:00,,25.4,89.0,,4,26.57246453089784,"Holy Cross Memorial Park, Quirino, Novaliches, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T05:00:00,,25.3,90.0,,5,26.337829740184457,"Holy Cross Memorial Park, Quirino, Novaliches, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T06:00:00,,25.1,91.0,,6,25.859370887315503,"Holy Cross Memorial Park, Quirino, Novaliches, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T07:00:00,,25.5,89.0,,7,26.80267779577785,"Holy Cross Memorial Park, Quirino, Novaliches, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T08:00:00,,26.3,85.0,,8,28.531415670995614,"Holy Cross Memorial Park, Quirino, Novaliches, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T09:00:00,,26.9,84.0,,9,29.880478389331,"Holy Cross Memorial Park, Quirino, Novaliches, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T10:00:00,,28.4,75.0,,10,32.25915318247125,"Holy Cross Memorial Park, Quirino, Novaliches, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T11:00:00,,30.1,68.0,,11,34.7963550685846,"Holy Cross Memorial Park, Quirino, Novaliches, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T12:00:00,,30.6,65.0,,12,35.21891191607106,"Holy Cross Memorial Park, Quirino, Novaliches, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T13:00:00,,31.0,63.0,,13,35.6165008484444,"Holy Cross Memorial Park, Quirino, Novaliches, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T14:00:00,,30.9,60.0,,14,34.63461998783789,"Holy Cross Memorial Park, Quirino, Novaliches, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T15:00:00,,30.7,60.0,,15,34.21899485351784,"Holy Cross Memorial Park, Quirino, Novaliches, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T16:00:00,,30.2,63.0,,16,33.86477731500452,"Holy Cross Memorial Park, Quirino, Novaliches, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T17:00:00,,29.3,66.0,,17,32.61457610285113,"Holy Cross Memorial Park, Quirino, Novaliches, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T18:00:00,,28.5,71.0,,18,31.8254669437778,"Holy Cross Memorial Park, Quirino, Novaliches, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T19:00:00,,27.6,80.0,,19,31.121516145937942,"Holy Cross Memorial Park, Quirino, Novaliches, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T20:00:00,,26.9,83.0,,20,29.7888413441511,"Holy Cross Memorial Park, Quirino, Novaliches, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T21:00:00,,26.5,84.0,,21,28.932269870611226,"Holy Cross Memorial Park, Quirino, Novaliches, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T22:00:00,,26.4,84.0,,22,28.702627881031106,"Holy Cross Memorial Park, Quirino, Novaliches, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T23:00:00,,26.3,83.0,,23,28.420838497271184,"Holy Cross Memorial Park, Quirino, Novaliches, Quezon City, Metro Manila, Philippines",Quezon City,14.65,121.05
+2025-11-15T00:00:00,,5.9,46.0,,0,45.79114877601554,ADA's Kitchen,Rockland,44.105338,-69.10916399999999
+2025-11-15T01:00:00,,6.5,46.0,,1,44.25520564905557,ADA's Kitchen,Rockland,44.105338,-69.10916399999999
+2025-11-15T02:00:00,,5.6,53.0,,2,49.063946292817775,ADA's Kitchen,Rockland,44.105338,-69.10916399999999
+2025-11-15T03:00:00,,5.5,53.0,,3,49.3681546637778,ADA's Kitchen,Rockland,44.105338,-69.10916399999999
+2025-11-15T04:00:00,,4.7,58.0,,4,53.10608564481555,ADA's Kitchen,Rockland,44.105338,-69.10916399999999
+2025-11-15T05:00:00,,3.7,65.0,,5,57.58051218095108,ADA's Kitchen,Rockland,44.105338,-69.10916399999999
+2025-11-15T06:00:00,,2.4,72.0,,6,62.82828693116444,ADA's Kitchen,Rockland,44.105338,-69.10916399999999
+2025-11-15T07:00:00,,1.8,72.0,,7,65.59370688572447,ADA's Kitchen,Rockland,44.105338,-69.10916399999999
+2025-11-15T08:00:00,,1.5,71.0,,8,67.08101664377773,ADA's Kitchen,Rockland,44.105338,-69.10916399999999
+2025-11-15T09:00:00,,0.7,75.0,,9,70.59557121055113,ADA's Kitchen,Rockland,44.105338,-69.10916399999999
+2025-11-15T10:00:00,,0.4,74.0,,10,72.25521176583105,ADA's Kitchen,Rockland,44.105338,-69.10916399999999
+2025-11-15T11:00:00,,0.1,76.0,,11,73.54624582161553,ADA's Kitchen,Rockland,44.105338,-69.10916399999999
+2025-11-15T12:00:00,,-0.4,78.0,,12,75.86439239601776,ADA's Kitchen,Rockland,44.105338,-69.10916399999999
+2025-11-15T13:00:00,,-0.6,79.0,,13,76.74624299347553,ADA's Kitchen,Rockland,44.105338,-69.10916399999999
+2025-11-15T14:00:00,,-0.7,80.0,,14,77.05421247711782,ADA's Kitchen,Rockland,44.105338,-69.10916399999999
+2025-11-15T15:00:00,,-0.6,80.0,,15,76.49229615153776,ADA's Kitchen,Rockland,44.105338,-69.10916399999999
+2025-11-15T16:00:00,,-0.3,76.0,,16,75.67832082609551,ADA's Kitchen,Rockland,44.105338,-69.10916399999999
+2025-11-15T17:00:00,,0.6,72.0,,17,71.4018206423645,ADA's Kitchen,Rockland,44.105338,-69.10916399999999
+2025-11-15T18:00:00,,0.1,76.0,,18,73.54624582161553,ADA's Kitchen,Rockland,44.105338,-69.10916399999999
+2025-11-15T19:00:00,,-0.2,78.0,,19,74.77339087233777,ADA's Kitchen,Rockland,44.105338,-69.10916399999999
+2025-11-15T20:00:00,,-0.6,76.0,,20,77.30574679971548,ADA's Kitchen,Rockland,44.105338,-69.10916399999999
+2025-11-15T21:00:00,,0.2,69.0,,21,73.37816032225776,ADA's Kitchen,Rockland,44.105338,-69.10916399999999
+2025-11-15T22:00:00,,1.2,60.0,,22,67.10096101121778,ADA's Kitchen,Rockland,44.105338,-69.10916399999999
+2025-11-15T23:00:00,,2.3,56.0,,23,61.3155077084511,ADA's Kitchen,Rockland,44.105338,-69.10916399999999
+2025-11-15T00:00:00,,26.1,90.0,,0,28.293575284504616,"Adamson University, San Marcelino Street, Ermita, Manila, Metro Manila, Philippines",Manila,14.6,120.98
+2025-11-15T01:00:00,,25.8,90.0,,1,27.536510667484507,"Adamson University, San Marcelino Street, Ermita, Manila, Metro Manila, Philippines",Manila,14.6,120.98
+2025-11-15T02:00:00,,26.1,89.0,,2,28.24954585849793,"Adamson University, San Marcelino Street, Ermita, Manila, Metro Manila, Philippines",Manila,14.6,120.98
+2025-11-15T03:00:00,,26.0,90.0,,3,28.03806574044451,"Adamson University, San Marcelino Street, Ermita, Manila, Metro Manila, Philippines",Manila,14.6,120.98
+2025-11-15T04:00:00,,25.8,92.0,,4,27.584864000391217,"Adamson University, San Marcelino Street, Ermita, Manila, Metro Manila, Philippines",Manila,14.6,120.98
+2025-11-15T05:00:00,,25.5,94.0,,5,26.8233834310556,"Adamson University, San Marcelino Street, Ermita, Manila, Metro Manila, Philippines",Manila,14.6,120.98
+2025-11-15T06:00:00,,25.4,94.0,,6,26.560242649475683,"Adamson University, San Marcelino Street, Ermita, Manila, Metro Manila, Philippines",Manila,14.6,120.98
+2025-11-15T07:00:00,,25.8,91.0,,7,27.56077961619563,"Adamson University, San Marcelino Street, Ermita, Manila, Metro Manila, Philippines",Manila,14.6,120.98
+2025-11-15T08:00:00,,26.3,87.0,,8,28.64340993785792,"Adamson University, San Marcelino Street, Ermita, Manila, Metro Manila, Philippines",Manila,14.6,120.98
+2025-11-15T09:00:00,,27.0,83.0,,9,30.027103067111145,"Adamson University, San Marcelino Street, Ermita, Manila, Metro Manila, Philippines",Manila,14.6,120.98
+2025-11-15T10:00:00,,28.2,76.0,,10,31.957931376995493,"Adamson University, San Marcelino Street, Ermita, Manila, Metro Manila, Philippines",Manila,14.6,120.98
+2025-11-15T11:00:00,,30.0,69.0,,11,34.79838247777783,"Adamson University, San Marcelino Street, Ermita, Manila, Metro Manila, Philippines",Manila,14.6,120.98
+2025-11-15T12:00:00,,30.8,65.0,,12,35.68311197015103,"Adamson University, San Marcelino Street, Ermita, Manila, Metro Manila, Philippines",Manila,14.6,120.98
+2025-11-15T13:00:00,,31.3,62.0,,13,36.03209503735782,"Adamson University, San Marcelino Street, Ermita, Manila, Metro Manila, Philippines",Manila,14.6,120.98
+2025-11-15T14:00:00,,31.2,58.0,,14,34.766201563715704,"Adamson University, San Marcelino Street, Ermita, Manila, Metro Manila, Philippines",Manila,14.6,120.98
+2025-11-15T15:00:00,,30.7,60.0,,15,34.21899485351784,"Adamson University, San Marcelino Street, Ermita, Manila, Metro Manila, Philippines",Manila,14.6,120.98
+2025-11-15T16:00:00,,30.4,62.0,,16,34.058703458897845,"Adamson University, San Marcelino Street, Ermita, Manila, Metro Manila, Philippines",Manila,14.6,120.98
+2025-11-15T17:00:00,,29.6,66.0,,17,33.23910134327106,"Adamson University, San Marcelino Street, Ermita, Manila, Metro Manila, Philippines",Manila,14.6,120.98
+2025-11-15T18:00:00,,28.4,73.0,,18,31.932073083395743,"Adamson University, San Marcelino Street, Ermita, Manila, Metro Manila, Philippines",Manila,14.6,120.98
+2025-11-15T19:00:00,,27.8,78.0,,19,31.32496197153783,"Adamson University, San Marcelino Street, Ermita, Manila, Metro Manila, Philippines",Manila,14.6,120.98
+2025-11-15T20:00:00,,27.3,82.0,,20,30.644267293535577,"Adamson University, San Marcelino Street, Ermita, Manila, Metro Manila, Philippines",Manila,14.6,120.98
+2025-11-15T21:00:00,,26.9,84.0,,21,29.880478389331,"Adamson University, San Marcelino Street, Ermita, Manila, Metro Manila, Philippines",Manila,14.6,120.98
+2025-11-15T22:00:00,,26.7,86.0,,22,29.56145983898441,"Adamson University, San Marcelino Street, Ermita, Manila, Metro Manila, Philippines",Manila,14.6,120.98
+2025-11-15T23:00:00,,26.5,87.0,,23,29.13715539977784,"Adamson University, San Marcelino Street, Ermita, Manila, Metro Manila, Philippines",Manila,14.6,120.98
+2025-11-15T00:00:00,,25.4,86.0,,0,26.57237909420445,ASD Badminton Center,Angat,14.9477032,121.0258701
+2025-11-15T01:00:00,,25.3,88.0,,1,26.352192328815686,ASD Badminton Center,Angat,14.9477032,121.0258701
+2025-11-15T02:00:00,,24.9,90.0,,2,25.43566908930445,ASD Badminton Center,Angat,14.9477032,121.0258701
+2025-11-15T03:00:00,,25.0,88.0,,3,25.708156755555603,ASD Badminton Center,Angat,14.9477032,121.0258701
+2025-11-15T04:00:00,,25.0,87.0,,4,25.73241527777785,ASD Badminton Center,Angat,14.9477032,121.0258701
+2025-11-15T05:00:00,,24.9,87.0,,5,25.52991267209778,ASD Badminton Center,Angat,14.9477032,121.0258701
+2025-11-15T06:00:00,,25.0,87.0,,6,25.73241527777785,ASD Badminton Center,Angat,14.9477032,121.0258701
+2025-11-15T07:00:00,,25.7,86.0,,7,27.216744442584424,ASD Badminton Center,Angat,14.9477032,121.0258701
+2025-11-15T08:00:00,,26.6,84.0,,8,29.164875916231228,ASD Badminton Center,Angat,14.9477032,121.0258701
+2025-11-15T09:00:00,,26.7,85.0,,9,29.48056154619557,ASD Badminton Center,Angat,14.9477032,121.0258701
+2025-11-15T10:00:00,,26.8,84.0,,10,29.63898017559116,ASD Badminton Center,Angat,14.9477032,121.0258701
+2025-11-15T11:00:00,,28.4,78.0,,11,32.76911040561793,ASD Badminton Center,Angat,14.9477032,121.0258701
+2025-11-15T12:00:00,,29.1,75.0,,12,33.94281318847107,ASD Badminton Center,Angat,14.9477032,121.0258701
+2025-11-15T13:00:00,,28.8,75.0,,13,33.205233847751124,ASD Badminton Center,Angat,14.9477032,121.0258701
+2025-11-15T14:00:00,,28.6,74.0,,14,32.55050254743109,ASD Badminton Center,Angat,14.9477032,121.0258701
+2025-11-15T15:00:00,,28.2,76.0,,15,31.957931376995493,ASD Badminton Center,Angat,14.9477032,121.0258701
+2025-11-15T16:00:00,,27.9,78.0,,16,31.558732671517816,ASD Badminton Center,Angat,14.9477032,121.0258701
+2025-11-15T17:00:00,,27.0,80.0,,17,29.740206061777844,ASD Badminton Center,Angat,14.9477032,121.0258701
+2025-11-15T18:00:00,,26.5,80.0,,18,28.66705244127784,ASD Badminton Center,Angat,14.9477032,121.0258701
+2025-11-15T19:00:00,,26.2,81.0,,19,28.105566050684352,ASD Badminton Center,Angat,14.9477032,121.0258701
+2025-11-15T20:00:00,,26.2,81.0,,20,28.105566050684352,ASD Badminton Center,Angat,14.9477032,121.0258701
+2025-11-15T21:00:00,,25.9,83.0,,21,27.567472304951075,ASD Badminton Center,Angat,14.9477032,121.0258701
+2025-11-15T22:00:00,,25.8,83.0,,22,27.36146022007117,ASD Badminton Center,Angat,14.9477032,121.0258701
+2025-11-15T23:00:00,,25.4,83.0,,23,26.56672973335115,ASD Badminton Center,Angat,14.9477032,121.0258701
+2025-11-15T00:00:00,,26.3,85.0,,0,28.531415670995614,Asian Hospital and Medical Center,Muntinlupa,14.4134655,121.0435335
+2025-11-15T01:00:00,,26.3,84.0,,1,28.47594994749122,Asian Hospital and Medical Center,Muntinlupa,14.4134655,121.0435335
+2025-11-15T02:00:00,,26.5,82.0,,2,28.798523545055712,Asian Hospital and Medical Center,Muntinlupa,14.4134655,121.0435335
+2025-11-15T03:00:00,,26.3,83.0,,3,28.420838497271184,Asian Hospital and Medical Center,Muntinlupa,14.4134655,121.0435335
+2025-11-15T04:00:00,,26.2,83.0,,4,28.203099271271032,Asian Hospital and Medical Center,Muntinlupa,14.4134655,121.0435335
+2025-11-15T05:00:00,,25.9,84.0,,5,27.59887877373111,Asian Hospital and Medical Center,Muntinlupa,14.4134655,121.0435335
+2025-11-15T06:00:00,,25.9,84.0,,6,27.59887877373111,Asian Hospital and Medical Center,Muntinlupa,14.4134655,121.0435335
+2025-11-15T07:00:00,,26.4,83.0,,7,28.64150950855109,Asian Hospital and Medical Center,Muntinlupa,14.4134655,121.0435335
+2025-11-15T08:00:00,,26.6,81.0,,8,28.947216398204585,Asian Hospital and Medical Center,Muntinlupa,14.4134655,121.0435335
+2025-11-15T09:00:00,,27.1,81.0,,9,30.06378264580453,Asian Hospital and Medical Center,Muntinlupa,14.4134655,121.0435335
+2025-11-15T10:00:00,,28.0,77.0,,10,31.6466108724446,Asian Hospital and Medical Center,Muntinlupa,14.4134655,121.0435335
+2025-11-15T11:00:00,,29.3,71.0,,11,33.597954739617755,Asian Hospital and Medical Center,Muntinlupa,14.4134655,121.0435335
+2025-11-15T12:00:00,,29.8,69.0,,12,34.327681890257786,Asian Hospital and Medical Center,Muntinlupa,14.4134655,121.0435335
+2025-11-15T13:00:00,,30.1,67.0,,13,34.55961232107571,Asian Hospital and Medical Center,Muntinlupa,14.4134655,121.0435335
+2025-11-15T14:00:00,,29.9,68.0,,14,34.33203095058457,Asian Hospital and Medical Center,Muntinlupa,14.4134655,121.0435335
+2025-11-15T15:00:00,,29.4,69.0,,15,33.41586011809787,Asian Hospital and Medical Center,Muntinlupa,14.4134655,121.0435335
+2025-11-15T16:00:00,,29.3,69.0,,16,33.194067050657765,Asian Hospital and Medical Center,Muntinlupa,14.4134655,121.0435335
+2025-11-15T17:00:00,,28.2,75.0,,17,31.802123616551143,Asian Hospital and Medical Center,Muntinlupa,14.4134655,121.0435335
+2025-11-15T18:00:00,,27.2,79.0,,18,30.084231424035547,Asian Hospital and Medical Center,Muntinlupa,14.4134655,121.0435335
+2025-11-15T19:00:00,,26.7,83.0,,19,29.32111325407113,Asian Hospital and Medical Center,Muntinlupa,14.4134655,121.0435335
+2025-11-15T20:00:00,,26.8,83.0,,20,29.553511406471173,Asian Hospital and Medical Center,Muntinlupa,14.4134655,121.0435335
+2025-11-15T21:00:00,,26.7,83.0,,21,29.32111325407113,Asian Hospital and Medical Center,Muntinlupa,14.4134655,121.0435335
+2025-11-15T22:00:00,,26.5,83.0,,22,28.86511230511113,Asian Hospital and Medical Center,Muntinlupa,14.4134655,121.0435335
+2025-11-15T23:00:00,,26.5,83.0,,23,28.86511230511113,Asian Hospital and Medical Center,Muntinlupa,14.4134655,121.0435335

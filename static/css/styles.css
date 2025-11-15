@@ -389,14 +389,14 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 .graph-reco{
   display: none;
   width: 100%;
-  height: 100%;
   flex-direction: column;
   align-items: end;
   justify-content: space-between;
+  gap: 15px; 
   z-index: 5;
 }
 
-.graph-container, .reco-container {
+.graph-container, .reco-container, .reco-time-container {
   width: 90%;
   min-height: 45%;
   max-height: 45%;

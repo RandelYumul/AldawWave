@@ -1,219 +1,265 @@
-// Function to ensure date and time inputs have default values
-window.onload = function() {
+(function preventReload() {
+
+    // Disable reload shortcuts
+    window.addEventListener("keydown", function (e) {
+        if (e.key === "F5") e.preventDefault();                 // Block F5
+        if ((e.ctrlKey || e.metaKey) && e.key === "r") e.preventDefault();   // Block Ctrl+R / Cmd+R
+    });
+
+    // Block navigation attempts silently
+    window.addEventListener("beforeunload", function (e) {
+        // Do NOT set returnValue → no popup will show
+        e.preventDefault();
+    });
+
+    // Block programmatic reloads
+    const originalReload = window.location.reload;
+    window.location.reload = function () {
+        console.warn("Reload blocked.");
+    };
+
+})();
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    /* -------------------------
+       SET DEFAULT DATE & TIME
+    --------------------------*/
     const today = new Date();
     const dateInput = document.getElementById('date');
     const timeInput = document.getElementById('time');
 
-    // Set date to today's date (YYYY-MM-DD format)
     const yyyy = today.getFullYear();
-    const mm = String(today.getMonth() + 1).padStart(2, '0'); // Months start at 0
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
     const dd = String(today.getDate()).padStart(2, '0');
     dateInput.value = `${yyyy}-${mm}-${dd}`;
 
-    // Set time to the next hour (HH:MM format)
     let nextHour = today.getHours() + 1;
     if (nextHour > 23) nextHour = 0;
-    const nextHourStr = String(nextHour).padStart(2, '0');
-    timeInput.value = `${nextHourStr}:00`;
-};
+    timeInput.value = `${String(nextHour).padStart(2, '0')}:00`;
 
-let map, directionsService, directionsRenderer, originAutocomplete, destinationAutocomplete;
 
-function initMap() {
-    // Initialize the map centered on the Philippines
-    map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: 15.1449, lng: 120.5896 }, // Angeles City
-        zoom: 12,
-    });
+    /* -------------------------
+       MAP + AUTOCOMPLETE SETUP
+    --------------------------*/
+    let map, directionsService, directionsRenderer;
+    let originAutocomplete, destinationAutocomplete;
 
-    directionsService = new google.maps.DirectionsService();
-    directionsRenderer = new google.maps.DirectionsRenderer({
-        map: map,
-        suppressMarkers: false,
-        polylineOptions: {
-            strokeColor: "red",
-            strokeOpacity: 0.8,
-            strokeWeight: 6,
-        },
-    });
-
-    // Setup autocomplete for inputs
-    const originInput = document.getElementById('origin');
-    const destinationInput = document.getElementById('destination');
-
-    const options = { types: ['geocode'], componentRestrictions: { country: 'ph' } };
-
-    originAutocomplete = new google.maps.places.Autocomplete(originInput, options);
-    destinationAutocomplete = new google.maps.places.Autocomplete(destinationInput, options);
-}
-
-// Draw route between origin and destination
-function drawRoute() {
-    const origin = document.getElementById("origin").value;
-    const destination = document.getElementById("destination").value;
-
-    if (!origin || !destination) {
-        alert("Please enter both origin and destination.");
-        return;
-    }
-
-    const request = {
-        origin: origin,
-        destination: destination,
-        travelMode: google.maps.TravelMode.DRIVING
-    };
-
-    directionsService.route(request, (result, status) => {
-        if (status === "OK") {
-            directionsRenderer.setDirections(result);
-        } else {
-            alert("Could not display directions due to: " + status);
-        }
-    });
-}
-
-function initAutocomplete() {
-    // 1. Get the input elements by their IDs
-    const originInput = document.getElementById('origin');
-    const destinationInput = document.getElementById('destination');
-
-    // Check if the Google Maps API loaded correctly
-    if (typeof google === 'undefined' || !google.maps.places) {
-        console.error("Google Maps Places library is not loaded. Check your API key and script tag.");
-        return;
-    }
-
-    // 2. Create the Autocomplete objects
-    const autocompleteOptions = {
-        // Restrict results to locations that can be geocoded (addresses, cities, etc.)
-        types: ['geocode', 'establishment'],
-        // Optional: uncomment to restrict search to a specific country (e.g., Philippines)
-        // componentRestrictions: { country: 'ph' } 
-    };
-
-    const originAutocomplete = new google.maps.places.Autocomplete(originInput, autocompleteOptions);
-    const destinationAutocomplete = new google.maps.places.Autocomplete(destinationInput, autocompleteOptions);
-
-    // 3. Optional: Listen for the 'place_changed' event
-    // This ensures your backend always receives the standardized full address.
-    originAutocomplete.addListener('place_changed', () => {
-        const place = originAutocomplete.getPlace();
-        // The input value is automatically updated with place.name or formatted_address
-        if (place.formatted_address) {
-             originInput.value = place.formatted_address;
-             console.log('Origin Selected:', place.formatted_address);
-        }
-    });
-
-    destinationAutocomplete.addListener('place_changed', () => {
-        const place = destinationAutocomplete.getPlace();
-        if (place.formatted_address) {
-            destinationInput.value = place.formatted_address;
-            console.log('Destination Selected:', place.formatted_address);
-        }
-    });
-}
-
-async function showRecommendations() {
-    drawRoute();
-    const origin = document.getElementById("origin").value;
-    const destination = document.getElementById("destination").value;
-    const date = document.getElementById("date").value;
-    const time = document.getElementById("time").value;
-
-    const graphContainer = document.querySelector(".graph-container");
-    const recoContainer = document.querySelector(".reco-container");
-    const travelTimeDisplay = document.getElementById("travel-time-display");
-
-    // Clear previous results and show loading
-    graphContainer.innerHTML = '<p style="text-align: center;">Loading graph...</p>';
-    recoContainer.innerHTML = '<p style="text-align: center;">Calculating recommendations...</p>';
-    travelTimeDisplay.textContent = 'Calculating travel time...';
-    
-    if (!origin || !destination || !date || !time) {
-        alert("Please enter origin, destination, date, and preferred time.");
-        graphContainer.innerHTML = '<p id="graph-placeholder">Input your route and time to see the hourly heat index forecast graph.</p>';
-        recoContainer.innerHTML = '<p id="reco-placeholder">Departure recommendations and travel tips will appear here.</p>';
-        travelTimeDisplay.textContent = '';
-        return;
-    }
-
-    try {
-        const response = await fetch('http://127.0.0.1:5000/recommendation', { // Assuming Flask runs on 5000
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                origin: origin,
-                destination: destination,
-                date: date,
-                time: time
-            })
+    window.initMap = function () {
+        map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat: 15.1449, lng: 120.5896 },
+            zoom: 12,
         });
 
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+        directionsService = new google.maps.DirectionsService();
+        directionsRenderer = new google.maps.DirectionsRenderer({
+            map: map,
+            suppressMarkers: false,
+            polylineOptions: {
+                strokeColor: "red",
+                strokeOpacity: 0.8,
+                strokeWeight: 6,
+            },
+        });
+
+        initAutocomplete();
+    };
+
+
+    function initAutocomplete() {
+        const originInput = document.getElementById("origin");
+        const destinationInput = document.getElementById("destination");
+
+        const options = {
+            types: ["establishment"],
+            componentRestrictions: { country: "ph" },
+        };
+
+        originAutocomplete = new google.maps.places.Autocomplete(originInput, options);
+        destinationAutocomplete = new google.maps.places.Autocomplete(destinationInput, options);
+
+        function onPlaceChange(autocomplete, input) {
+            const place = autocomplete.getPlace();
+            if (!place) return;
+
+            if (place.name) input.value = place.name;
+            else if (place.formatted_address) input.value = place.formatted_address;
+            else if (place.geometry) {
+                input.value =
+                    place.geometry.location.lat() + ", " + place.geometry.location.lng();
+            }
         }
 
-        const data = await response.json();
+        originAutocomplete.addListener("place_changed", () =>
+            onPlaceChange(originAutocomplete, originInput)
+        );
+        destinationAutocomplete.addListener("place_changed", () =>
+            onPlaceChange(destinationAutocomplete, destinationInput)
+        );
+    }
 
-        if (data.error) {
-            graphContainer.innerHTML = `<p style="color: red; text-align: center;">Error: ${data.error}</p>`;
-            recoContainer.innerHTML = `<p style="color: red; text-align: center;">Error: ${data.error}</p>`;
-            travelTimeDisplay.textContent = `Error getting travel time.`;
+
+    /* -------------------------
+       DRAW ROUTE
+    --------------------------*/
+    function drawRoute() {
+        const origin = document.getElementById("origin").value;
+        const destination = document.getElementById("destination").value;
+
+        if (!origin || !destination) {
+            alert("Please enter both origin and destination.");
             return;
         }
 
-        // --- Render Graph ---
-        graphContainer.innerHTML = `
-            <img src="${data.graph_image}" alt="Heat Index Forecast Graph" style="width: 100%; height: auto;">
-        `;
+        directionsService.route(
+            {
+                origin,
+                destination,
+                travelMode: google.maps.TravelMode.DRIVING,
+            },
+            (result, status) => {
+                if (status === "OK") {
+                    directionsRenderer.setDirections(result);
+                } else {
+                    alert("Could not display directions: " + status);
+                }
+            }
+        );
+    }
 
-        // --- Render Recommendations ---
-        recoContainer.innerHTML = `<h3>Departure Recommendations</h3>`;
-        travelTimeDisplay.textContent = `Estimated Travel Time: ${data.travel_time}`;
 
-        if (data.recommendations && data.recommendations.length > 0) {
-            data.recommendations.forEach((rec, i) => {
-                const div = document.createElement("div");
-                div.className = "route-box"; // Assuming this class is in your styles.css
-                
-                div.innerHTML = `
-                    <strong>Option ${i + 1}</strong>: Leave at <strong>${rec.departure_time}</strong> (Heat Index: ${rec.heat_index})<br>
-                    <p style="margin-top: 5px; font-style: italic;">${rec.recommendation}</p>
-                `;
-                recoContainer.appendChild(div);
-            });
-        } else {
-             recoContainer.innerHTML += '<p>No valid departure times could be suggested for the selected arrival time and travel duration.</p>';
+    /* -------------------------
+       SWAP ORIGIN & DESTINATION
+    --------------------------*/
+    document.querySelector(".swap-btn").addEventListener("click", () => {
+        const origin = document.getElementById("origin");
+        const destination = document.getElementById("destination");
+
+        const temp = origin.value;
+        origin.value = destination.value;
+        destination.value = temp;
+    });
+
+
+    /* -------------------------
+       SIDEBAR TOGGLE
+    --------------------------*/
+    document.querySelector(".logo-container").addEventListener("click", () => {
+        document.querySelector(".sidebar").classList.toggle("expanded");
+    });
+
+
+    /* -------------------------
+       FORCE DISABLE ENTER KEY (prevents reload)
+    --------------------------*/
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") e.preventDefault();
+    });
+
+
+    /* -------------------------
+       SHOW RECOMMENDATIONS
+    --------------------------*/
+    async function showRecommendations() {
+        drawRoute();
+
+        const origin = document.getElementById("origin").value;
+        const destination = document.getElementById("destination").value;
+        const date = document.getElementById("date").value;
+        const time = document.getElementById("time").value;
+
+        const graphContainer = document.querySelector(".graph-container");
+        const recoContainer = document.querySelector(".reco-container");
+        const recoTimeContainer = document.getElementById("reco-time-placeholder");
+        const travelTimeDisplay = document.getElementById("travel-time-display");
+
+        // Loading UI
+        graphContainer.innerHTML = '<p style="text-align:center;">Loading graph...</p>';
+        recoContainer.innerHTML = '<p style="text-align:center;">Calculating travel tip...</p>';
+        recoTimeContainer.innerHTML = '<p style="text-align:center;">Loading top 5 options...</p>';
+        travelTimeDisplay.textContent = "Calculating travel time...";
+
+        if (!origin || !destination || !date || !time) {
+            alert("Please enter all fields.");
+            graphContainer.innerHTML = '<p id="graph-placeholder">Input your route and time to see the hourly heat index forecast graph.</p>';
+            recoContainer.innerHTML = '<p id="reco-placeholder">Departure recommendations will appear here.</p>';
+            recoTimeContainer.innerHTML = '<p id="reco-time-placeholder">Departure recommendations time will appear here.</p>';
+            travelTimeDisplay.textContent = "";
+            return;
         }
 
-    } catch (error) {
-        console.error('Error fetching recommendations:', error);
-        graphContainer.innerHTML = `<p style="color: red; text-align: center;">Failed to connect to the recommendation server. Please check if 'aldaw_wave_api.py' is running.</p>`;
-        recoContainer.innerHTML = `<p style="color: red; text-align: center;">Failed to get recommendations.</p>`;
-        travelTimeDisplay.textContent = 'Server connection error.';
+        try {
+            const response = await fetch("http://127.0.0.1:5000/recommendation", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ origin, destination, date, time }),
+            });
+
+            if (!response.ok) throw new Error("Server error");
+
+            const data = await response.json();
+            if (data.error) {
+                graphContainer.innerHTML = `<p style="color:red;text-align:center;">${data.error}</p>`;
+                recoContainer.innerHTML = `<p style="color:red;text-align:center;">${data.error}</p>`;
+                recoTimeContainer.innerHTML = `<p style="color:red;text-align:center;">${data.error}</p>`;
+                travelTimeDisplay.textContent = "Error fetching travel time.";
+                return;
+            }
+
+            // --- GRAPH ---
+            graphContainer.innerHTML = `<img src="${data.graph_image}" style="width:100%;height:auto;">`;
+
+            // --- TRAVEL TIME DISPLAY ---
+            travelTimeDisplay.innerHTML = `
+                Estimated Travel Time: <strong>${data.travel_time}</strong><br>
+                Heat Index at Arrival: <strong>${data.arrival_heat_index}</strong>
+            `;
+
+            // --- CONSOLIDATED TRAVEL TIP ---
+            recoContainer.innerHTML = `
+                <h3>Travel Tip</h3>
+                <p>${data.consolidated_tip}</p>
+            `;
+
+            // --- TOP 5 OPTIONS (TIME + HEAT INDEX ONLY) ---
+            if (data.top_5_options?.length > 0) {
+                let optionsHTML = '<h3>Departure Time Recommendations</h3>';
+                data.top_5_options.forEach(opt => {
+                    optionsHTML += `
+                        <div class="route-box">
+                            <strong>${opt.Option}</strong>: <strong>${opt.departure_time}</strong> 
+                            (Heat Index: ${opt.heat_index})
+                        </div>
+                    `;
+                });
+                recoTimeContainer.innerHTML = optionsHTML;
+            } else {
+                recoTimeContainer.innerHTML = '<p>No valid departure times available.</p>';
+            }
+
+        } catch (err) {
+            graphContainer.innerHTML = `<p style="color:red;text-align:center;">Failed to connect to server.</p>`;
+            recoContainer.innerHTML = `<p style="color:red;text-align:center;">Could not load travel tip.</p>`;
+            recoTimeContainer.innerHTML = `<p style="color:red;text-align:center;">Could not load top 5 options.</p>`;
+            travelTimeDisplay.textContent = "Server error.";
+        }
     }
-}
 
-function swapInputs() {
-    const origin = document.getElementById("origin");
-    const destination = document.getElementById("destination");
 
-    const temp = origin.value;
-    origin.value = destination.value;
-    destination.value = temp;
-}
 
-function toggleSidebar() {
-    const sidebar = document.querySelector('.sidebar');
-    sidebar.classList.toggle('expanded');
-}
+    /* -------------------------
+       MAIN BUTTON — SINGLE CLEAN CLICK HANDLER
+    --------------------------*/
+    const showGraphBtn = document.getElementById("showGraphBtn");
+    const graph = document.querySelector(".graph-reco");
 
-const btn = document.getElementById('showGraphBtn');
-const graph = document.querySelector('.graph-reco');
+    showGraphBtn.addEventListener("click", (e) => {
+        if (e.key === "Enter" && e.target.tagName === "INPUT") {
+            e.preventDefault();
+        }
+        graph.style.display = "flex";
+        showRecommendations();
+    });
 
-btn.addEventListener('click', () => {
-  graph.style.display = 'flex';
 });
