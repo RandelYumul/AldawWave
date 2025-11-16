@@ -355,8 +355,23 @@ def recommendation():
             return float(np.interp(hf, extended_h, extended_hi))
 
     hi_list = [(dep, interp_hi(dep)) for dep in departure_times]
-    hi_list.sort(key=lambda x: (x[1], abs((x[0]-latest_departure).total_seconds())))
-    top_5 = hi_list[:5]
+    # Split before and after preferred time
+    before = [(dt, hi) for dt, hi in hi_list if dt <= latest_departure]
+    after  = [(dt, hi) for dt, hi in hi_list if dt > latest_departure]
+
+    # Sort each group by lowest heat index
+    before_sorted = sorted(before, key=lambda x: x[1])
+    after_sorted = sorted(after, key=lambda x: x[1])
+
+    # Select Top 3 from BEFORE preferred time
+    top_before = before_sorted[:3]
+
+    # Select Top 2 from AFTER preferred time
+    top_after = after_sorted[:2]
+
+    # Final ordered list: 1–3 before, 4–5 after
+    top_5 = top_before + top_after
+
 
     # Gemini AI tips (safe usage with fallback)
     gemini_recommendations = []
@@ -371,15 +386,22 @@ def recommendation():
         ])
 
         final_prompt = f"""
-    You are a smart commuting advisor for the Aldaw Wave project. Your goal is to help a commuter in Angeles City avoid extreme heat.
+        You are a smart commuting advisor for the Aldaw Wave project. Your goal is to help a commuter in Angeles City avoid extreme heat.
 
-    I have the top 5 departure options from {origin} to {destination} with a target arrival at {arrival_dt.strftime('%H:%M')}:
+        Here are the top 5 departure options from {origin} to {destination} with a target arrival at {arrival_dt.strftime('%H:%M')}. 
+        Options 1–3 occur before the preferred time, while Options 4–5 occur after:
 
-    {dep_options_text}
+        {dep_options_text}
 
-    Please generate a **single, concise, actionable travel tip** (2-3 sentences) for the commuter, 
-    highlighting the **best departure time** and why it is preferable compared to other options.
-    """
+        Instructions:
+        - Your response MUST mention **two recommended times**:
+            1. **Option 1**, which is the best choice for arriving on time with a relatively low heat index.
+            2. The **option that has the lowest heat index** among all 5 options.
+        - Clearly explain **why Option 1 is good** and **why the lowest-heat-index option is good**, in 2–3 concise sentences.
+        - Your answer must be actionable, simple, and helpful for the commuter.
+        - Do NOT use any Markdown formatting, bold text, asterisks, or special characters such as **, *, _, or similar. 
+        - Only use plain text.
+        """
 
         try:
             response = model_gemini.generate_content(final_prompt)

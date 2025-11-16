@@ -1,0 +1,10 @@
+Flask
+flask-cors
+numpy
+pandas
+requests
+requests-cache
+googlemaps
+google-generativeai
+python-dotenv
+matplotlib
