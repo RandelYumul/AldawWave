@@ -1,25 +1,3 @@
-(function preventReload() {
-
-    // Disable reload shortcuts
-    window.addEventListener("keydown", function (e) {
-        if (e.key === "F5") e.preventDefault();                 // Block F5
-        if ((e.ctrlKey || e.metaKey) && e.key === "r") e.preventDefault();   // Block Ctrl+R / Cmd+R
-    });
-
-    // Block navigation attempts silently
-    window.addEventListener("beforeunload", function (e) {
-        // Do NOT set returnValue → no popup will show
-        e.preventDefault();
-    });
-
-    // Block programmatic reloads
-    const originalReload = window.location.reload;
-    window.location.reload = function () {
-        console.warn("Reload blocked.");
-    };
-
-})();
-
 
 document.addEventListener("DOMContentLoaded", () => {
 
