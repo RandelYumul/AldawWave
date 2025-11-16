@@ -6,19 +6,19 @@ By combining machine learning, route intelligence, and real-time weather forecas
 ---
 
 ## Features
--   🔹**Heat Index Forecasting** --- Predicts hourly heat index using
+ 🔹**Heat Index Forecasting** --- Predicts hourly heat index using
     weather patterns and environmental inputs.\
--   🔹**Smart Travel Recommendations** --- Generates top 5 departure
+ 🔹**Smart Travel Recommendations** --- Generates top 5 departure
     options based on heat index and travel time.\
--   🔹**AI-Generated Commuting Advice** --- Uses Google Gemini to generate
+ 🔹**AI-Generated Commuting Advice** --- Uses Google Gemini to generate
     concise, plain-text travel tips.\
--   🔹**Route Estimation** --- Integrates Google Directions API for travel
+ 🔹**Route Estimation** --- Integrates Google Directions API for travel
     duration.\
--   🔹**Dynamic Visualization** --- Creates heat index graphs for a full
+ 🔹**Dynamic Visualization** --- Creates heat index graphs for a full
     24-hour timeline.\
--   🔹**Fallback Historical Logic** --- Pulls 7-day historical data when
+ 🔹**Fallback Historical Logic** --- Pulls 7-day historical data when
     future forecasts are unavailable.\
--   🔹**Frontend Auto-Works in Chrome** --- Fully functional by opening
+ 🔹**Frontend Auto-Works in Chrome** --- Fully functional by opening
     `index.html` directly (no Live Server required).
 
 ---
@@ -57,7 +57,7 @@ By combining machine learning, route intelligence, and real-time weather forecas
 
 ---
 
-## 🛠️ **Technologies Used**
+## **Technologies Used**
 
 -   **Python & Flask** --- Backend server and API logic\
 -   **Google Maps Platform** --- Geocoding and route duration\
@@ -148,7 +148,7 @@ python aldaw_wave.py
 
 ### 3. Open in index.html in Browser
   
-Right-click → Open With → choose your browser (e.g., Chrome, Edge, Firefox)
+Right-click → Open With → choose your browser (e.g., Chrome, Edge, Firefox)\
 ✔ **OPEN `index.html` DIRECTLY IN CHROME**\
 ✘ Do **NOT** use Live Server\
 ✘ Do **NOT** use VSCode Preview\
