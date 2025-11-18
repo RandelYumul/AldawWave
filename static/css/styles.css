@@ -255,18 +255,15 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 /* Sidebar */
 .sidebar {
   width: 8%;
+  min-width: 110px;
+  max-width: 110px;
   background: #ffffff;
   box-shadow: 5px 0 10px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: width 0.3s ease;
   position: relative;
   z-index: 10;
-}
-
-.sidebar.expanded {
-  width: 30%;
 }
 
 /* Logo Container */
@@ -275,49 +272,18 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
   background: #ff914d;
   padding: 1rem;
   border-radius: 15px;
-  width: 80%;
-  height: 10%;
-  transition: all 0.3s ease;
-}
-
-.logo-container:hover {
-  box-shadow: 0 0 12px rgba(255, 145, 77, 0.7);
+  width: 70px;
+  height: 70px;
+  flex-shrink: 0;
 }
 
 .logo {
   width: 100%;
-  height: auto;
-}
-
-.logo-text {
-  color: white;
-  font-weight: 600;
-  font-size: 1rem;
-  display: none;
-  white-space: nowrap;
-  margin-right: 5%;
-}
-
-.sidebar.expanded .logo-text {
-  display: flex;
-  flex-direction: row;
-  height: 15%;
-}
-
-/* Toggle Icon */
-.toggle-icon {
-  font-size: 1.5rem;
-  color: white;
-  transition: transform 0.3s ease;
-  margin-right: 10%;
-}
-
-.sidebar.expanded .toggle-icon {
-  transform: rotate(90deg);
+  height: 100%;
+  object-fit: contain;
 }
 
 /* Nav Links */
@@ -336,9 +302,10 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 .nav-item a {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: 8px;
   color: #333;
   text-decoration: none;
   padding: 12px 0;
@@ -346,29 +313,35 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-.sidebar.expanded .nav-item a {
-  justify-content: flex-start;
-  padding-left: 25px;
-}
-
 .icon {
   width: 26px;
   height: 26px;
+  display: block;
+  flex-shrink: 0;
 }
 
 .nav-text {
-  display: none;
+  display: block;
+  font-family: 'Quicksand', sans-serif;
   font-weight: 500;
-}
-
-.sidebar.expanded .nav-text {
-  display: inline;
+  font-size: 0.75rem;
 }
 
 /* Active Button */
 .nav-item.active a {
-  background: #f0f0f0;
   color: #ff914d;
+  position: relative;
+}
+
+.nav-item.active a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background: #ff914d;
+  border-radius: 0 8px 8px 0;
 }
 
 /* Hover */
@@ -526,14 +499,112 @@ h1 {
   }
 }
 
+/* Responsive Design for Tablets */
+@media (max-width: 1024px) {
+  .sidebar {
+    min-width: 90px;
+    max-width: 90px;
+  }
+
+  .logo-container {
+    width: 50px;
+    height: 50px;
+    padding: 0.8rem;
+  }
+
+  .nav-text {
+    font-size: 0.7rem;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Responsive Design for Mobile */
 @media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.08);
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+  .logo-container {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0;
+  }
+
+  .nav-item {
+    width: auto;
+  }
+
+  .nav-item a {
+    padding: 8px 20px;
+    gap: 4px;
+  }
+
+  .nav-item.active a::before {
+    left: 50%;
+    transform: translateX(-50%);
+    top: auto;
+    bottom: 0;
+    width: 60%;
+    height: 4px;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .nav-text {
+    font-size: 0.7rem;
+  }
+
   .team-member {
     width: 45%;
     min-height: 360px;
   }
+
+  /* Adjust main content to account for bottom navbar */
+  .map-input-graph-reco,
+  .header-team {
+    padding-bottom: 80px;
+  }
 }
 
 @media (max-width: 480px) {
+  .nav-item a {
+    padding: 8px 15px;
+  }
+
+  .nav-text {
+    font-size: 0.65rem;
+  }
+
+  .icon {
+    width: 22px;
+    height: 22px;
+  }
+
   .team-member {
     width: 90%;
     min-height: 340px;
