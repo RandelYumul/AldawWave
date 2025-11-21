@@ -271,7 +271,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             // --- GRAPH ---
-            graphContainer.innerHTML = `<img src="${data.graph_image}" style="width:100%;height:auto;">`;
+            graphContainer.innerHTML = `<img src="${data.graph_image}" style="width:100%;height:auto;border-radius:12px;">`;
 
             // --- TRAVEL TIME DISPLAY ---
             travelTimeDisplay.innerHTML = `
@@ -288,11 +288,43 @@ document.addEventListener("DOMContentLoaded", () => {
             // --- TOP 5 OPTIONS (TIME + HEAT INDEX ONLY) ---
             if (data.top_5_options?.length > 0) {
                 let optionsHTML = '<h3>Departure Time Recommendations</h3>';
-                data.top_5_options.forEach(opt => {
+                data.top_5_options.forEach((opt, index) => {
+                    // Extract numeric heat index value for color coding
+                    const heatValue = parseFloat(opt.heat_index);
+                    let tempClass = 'temp-moderate';
+                    let tempColor = '#ff914d';
+                    
+                    if (heatValue < 27) {
+                        tempClass = 'temp-cool';
+                        tempColor = '#2e86de';
+                    } else if (heatValue >= 32) {
+                        tempClass = 'temp-hot';
+                        tempColor = '#ff4d4d';
+                    }
+                    
+                    const isBest = index === 0;
+                    const bestBadge = isBest ? '<span class="best-badge">BEST</span>' : '';
+                    const boxClass = isBest ? 'route-box best-option' : 'route-box';
+                    
                     optionsHTML += `
-                        <div class="route-box">
-                            <strong>${opt.Option}</strong>: <strong>${opt.departure_time}</strong> 
-                            (Heat Index: ${opt.heat_index})
+                        <div class="${boxClass}">
+                            <div class="route-box-left">
+                                <div class="option-label">${opt.Option}${bestBadge}</div>
+                                <div class="time-display">
+                                    <svg class="clock-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                        <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                    ${opt.departure_time}
+                                </div>
+                            </div>
+                            <div class="route-box-right ${tempClass}" style="border-color: ${tempColor}; color: ${tempColor};">
+                                <svg class="temp-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: ${tempColor};">
+                                    <path d="M14 14.76V3.5C14 2.67 13.33 2 12.5 2C11.67 2 11 2.67 11 3.5V14.76C9.77 15.39 9 16.64 9 18C9 20.21 10.79 22 13 22C15.21 22 17 20.21 17 18C17 16.64 16.23 15.39 15 14.76H14Z" fill="currentColor"/>
+                                    <path d="M12.5 4C12.78 4 13 4.22 13 4.5V14.5C13 14.78 12.78 15 12.5 15C12.22 15 12 14.78 12 14.5V4.5C12 4.22 12.22 4 12.5 4Z" fill="#1a1a1a"/>
+                                </svg>
+                                ${opt.heat_index}
+                            </div>
                         </div>
                     `;
                 });
