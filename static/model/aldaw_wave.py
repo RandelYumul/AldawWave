@@ -381,7 +381,7 @@ def recommendation():
 
         # Prepare top 5 options text
         dep_options_text = "\n".join([
-            f"{i+1}. Leave at {dep.strftime('%H:%M')} (Predicted Heat Index: {hi:.2f}°C)"
+            f"{i+1}. Leave at {dep.strftime('%I:%M %p')} (Predicted Heat Index: {hi:.2f}°C)"
             for i, (dep, hi) in enumerate(top_5)
         ])
 
@@ -417,7 +417,7 @@ def recommendation():
     # --- Build simplified top 5 list (time + heat index only) ---
     top_5_simple = [
         {'Option': f"Option {i+1}", 
-        'departure_time': dep.strftime('%H:%M'), 
+        'departure_time': dep.strftime('%I:%M %p'), 
         'heat_index': f"{hi:.2f}°C"} 
         for i, (dep, hi) in enumerate(top_5)
     ]
