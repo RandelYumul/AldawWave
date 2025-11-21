@@ -281,7 +281,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // --- CONSOLIDATED TRAVEL TIP ---
             recoContainer.innerHTML = `
-                <h3>Travel Tip</h3>
+                <h3>Travel Tip 💡</h3>
                 <p>${data.consolidated_tip}</p>
             `;
 

@@ -553,17 +553,18 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 .graph-reco{
   display: none;
   width: 100%;
+  height: 100%;
   flex-direction: column;
   align-items: end;
   justify-content: space-between;
   gap: 15px; 
   z-index: 5;
+  overflow: hidden;
+  overflow-y: auto;
 }
 
 .graph-container, .reco-container, .reco-time-container {
   width: 90%;
-  min-height: 45%;
-  max-height: 45%;
   padding: 20px;
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
@@ -577,6 +578,22 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow-x: auto;
 }
+
+.graph-container {
+  min-height: 2%;
+  max-height: 50%;
+}
+
+.reco-container {
+  min-height: 2%;
+  max-height: 20%;
+}
+
+.reco-time-container {
+  min-height: 2%;
+  max-height: 30%;
+}
+
 
 .map-input-graph-reco{
   display: flex;
