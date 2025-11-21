@@ -216,4 +216,4 @@ Integration of machine learning and environmental analysis to predict heat index
 
 ---
 
-> *Aldaw-Wave: Where Data Meets the Weather — Predicting Tomorrow’s Heat Today.*
+> *Aldaw-Wave: Your companion in outsmarting the sun with better timing!*
